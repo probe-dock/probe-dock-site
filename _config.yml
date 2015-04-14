@@ -1,5 +1,5 @@
 # Site settings
-title: The Probe Dock Team
+title: Probe Dock
 email: contact@probe-dock.io
 description: > # this means to ignore newlines until "baseurl:"
   Probe Dock is a test tracking and analysis tool.
