@@ -1,3 +1,3 @@
-# Probe Dock Site
+# ProbeDock Site
 
-Jekyll site for Probe Dock.
+Jekyll site for ProbeDock.
