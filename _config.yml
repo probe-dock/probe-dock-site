@@ -1,12 +1,16 @@
 # Site settings
-title: ProbeDock
+title: Probe Dock
 email: contact@probedock.io
 description: > # this means to ignore newlines until "baseurl:"
   ProbeDock is a test tracking and analysis tool.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://probe-dock.io" # the base hostname & protocol for your site
+url: "http://probedock.io" # the base hostname & protocol for your site
+
+# Social
 twitter_username: ProbeDock
 github_username:  probedock
 
 # Build settings
 markdown: kramdown
+#gems:
+#  - jekyll-less
