@@ -12,5 +12,8 @@ github_username:  probedock
 
 # Build settings
 markdown: kramdown
-#gems:
-#  - jekyll-less
+exclude:
+  - local
+  - assets/less
+  - assets/plugins/font-awesome/less
+  - assets/plugins/font-awesome/sass
