@@ -11,9 +11,10 @@ task :pages do |t|
   remote = 'git@github.com:probedock/probedock.github.io.git'
 
   Dir.chdir source
+  current_branch = `git symbolic-ref --short HEAD`
   current_hash = `git log --pretty=format:'%h' -n 1`
 
-  puts Paint["\nCreating temporary repo...\n", :yellow]
+  puts Paint["\nCreating temporary repo...", :yellow]
 
   # create a temporary directory
   Dir.mktmpdir do |tmp|
@@ -46,12 +47,12 @@ task :pages do |t|
     Dir.chdir tmp
     raise 'ERROR: could not stage changes' unless system "git add -A"
     raise 'ERROR: could not stage changes' unless system "git ls-files --deleted -z | xargs -0 git rm"
-    raise 'ERROR: could not commit changes' unless system %/git commit -m "Generated from master@#{current_hash}."/
+    raise 'ERROR: could not commit changes' unless system %/git commit -m "Generated from #{current_branch}@#{current_hash}."/
 
     # push to remote master
     puts Paint["\nPushing...\n", :yellow]
     raise 'ERROR: could not push to master' unless system "git push origin master"
 
-    puts Paint['All good!', :bold, :green]
+    puts Paint["\nAll good!\n", :bold, :green]
   end
 end
