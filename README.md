@@ -12,6 +12,8 @@ Jekyll site for Probe Dock.
 
 * `cd probedock.github.io.git`
 
+* `git checkout source`
+
 * `bundle install`
 
 ## Serve locally
