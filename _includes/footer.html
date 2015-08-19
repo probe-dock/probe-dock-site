@@ -7,7 +7,7 @@
             <h3 class="title">On GitHub</h3>
             <ul class="list-unstyled download-list">
               <li><a class="btn btn-ghost" href="https://github.com/probedock/probedock"><i class="fa fa-github"></i><span class="text">Probe Dock</span> </a></li>
-              <li><a class="btn btn-ghost" href="https://github.com/probedock/probedock-clients"><i class="fa fa-github"></i><span class="text">Probe Dock Clients</span></a></li>
+              <li><a class="btn btn-ghost" href="https://github.com/probedock/probedock-clients"><i class="fa fa-github"></i><span class="text">Probe Dock Probes</span></a></li>
             </ul>
           </div><!--//footer-col-inner-->
         </div><!--//download-->
@@ -23,6 +23,11 @@
               </span>
             </p>
             <p class="email"><i class="fa fa-envelope-o"></i><a href="#">{{ site.email }}</a></p>
+            <div class="connect">
+              <ul class="social list-inline">
+                <li><a href="{{ site.baseurl }}/feed.xml"><i class="fa fa-rss"></i></a></li>
+              </ul>
+            </div>
           </div><!--//footer-col-inner-->
         </div><!--//contact-->
       </div>
@@ -36,16 +41,18 @@
 </footer><!--//footer-->
 
 <!-- Javascript -->
-<script type="text/javascript" src="{{ "assets/plugins/jquery-1.11.2.min.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "assets/plugins/jquery-migrate-1.2.1.min.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "assets/plugins/bootstrap/js/bootstrap.min.js" | prepend: site.baseurl }}"></script> 
-<script type="text/javascript" src="{{ "assets/plugins/bootstrap-hover-dropdown.min.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "assets/plugins/back-to-top.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "assets/plugins/jquery-placeholder/jquery.placeholder.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "assets/plugins/FitVids/jquery.fitvids.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "assets/plugins/flexslider/jquery.flexslider-min.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "assets/js/main.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/plugins/rrssb/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/plugins/jquery-1.11.2.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/plugins/jquery-migrate-1.2.1.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/plugins/bootstrap/js/bootstrap.min.js" | prepend: site.baseurl }}"></script> 
+<script type="text/javascript" src="{{ "/assets/plugins/bootstrap-hover-dropdown.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/plugins/back-to-top.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/plugins/jquery-placeholder/jquery.placeholder.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/plugins/FitVids/jquery.fitvids.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/plugins/flexslider/jquery.flexslider-min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/plugins/rrssb/js/rrssb.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
 
 <!-- Vimeo video API -->
 <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
-<script type="text/javascript" src="{{ "assets/js/vimeo.js" | prepend: site.baseurl }}"></script> 
+<script type="text/javascript" src="{{ "/assets/js/vimeo.js" | prepend: site.baseurl }}"></script> 

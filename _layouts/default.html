@@ -5,7 +5,7 @@
 
   {% include head.html %}
 
-  <body class="home-page">
+  <body class="{{ page.body_classes | join: ' ' }}">
 
     {% include header.html %}
 
