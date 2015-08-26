@@ -1807,7 +1807,7 @@ select {
   margin-bottom: 60px;
   position: relative;
   height: 500px;
-  background: #253340 url('../images/blog/post-2.jpg') no-repeat 50% top;
+  /*background:@color-2 url('../images/blog/post-2.jpg') no-repeat 50% top;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -3437,3 +3437,14 @@ select {
   }
 }
 /* Large devices (large desktops, 1200px and up) */
+.blog.container {
+  margin-top: 80px;
+}
+.blog-page .blog-entry-content h2 {
+  margin-top: 4em;
+  margin-bottom: 1em;
+}
+.footer .footer-col .connect a {
+  color: #b3b3b3;
+  font-size: 22px;
+}
