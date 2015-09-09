@@ -3444,6 +3444,9 @@ select {
   margin-top: 4em;
   margin-bottom: 1em;
 }
+.blog-page .blog-entry-content img {
+  max-width: 100%;
+}
 .footer .footer-col .connect a {
   color: #b3b3b3;
   font-size: 22px;
