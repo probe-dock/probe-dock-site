@@ -9,8 +9,8 @@
               <li><a class="btn btn-ghost" href="https://github.com/probedock/probedock"><i class="fa fa-github"></i><span class="text">Probe Dock</span> </a></li>
               <li><a class="btn btn-ghost" href="https://github.com/probedock/probedock-clients"><i class="fa fa-github"></i><span class="text">Probe Dock Probes</span></a></li>
             </ul>
-          </div><!--//footer-col-inner-->
-        </div><!--//download-->
+          </div>
+        </div>
         <div class="footer-col contact col-md-6 col-sm-12 col-xs-12">
           <div class="footer-col-inner">
             <h3 class="title">Contact us</h3>
@@ -23,22 +23,25 @@
               </span>
             </p>
             <p class="email"><i class="fa fa-envelope-o"></i><a href="#">{{ site.email }}</a></p>
-            <div class="connect">
-              <ul class="social list-inline">
-                <li><a href="{{ site.baseurl }}/feed.xml"><i class="fa fa-rss"></i></a></li>
-              </ul>
-            </div>
-          </div><!--//footer-col-inner-->
-        </div><!--//contact-->
+          </div>
+        </div>
+        <div class="footer-col connect col-md-6 col-md-offset-6 col-sm-12 col-xs-12">
+          <div class="footer-col-inner">
+            <ul class="social list-inline">
+              <li><a href="https://twitter.com/probedock" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li class="row-end"><a href="{{ site.baseurl }}/feed.xml"><i class="fa fa-rss"></i></a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div><!--//container-->
-  </div><!--//footer-content-->
+    </div>
+  </div>
   <div class="bottom-bar">
     <div class="container">
-      <small class="copyright">Copyright © 2015 <a href="{{ site.baseurl }}/" target="_blank">{{ site.title }}</a></small>
-    </div><!--//container-->
-  </div><!--//bottom-bar-->
-</footer><!--//footer-->
+      <small class="copyright">Copyright &copy; 2015 <a href="{{ site.baseurl }}/" target="_blank">{{ site.title }}</a></small>
+    </div>
+  </div>
+</footer>
 
 <!-- Javascript -->
 <script type="text/javascript" src="{{ "/assets/plugins/rrssb/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" | prepend: site.baseurl }}"></script>
