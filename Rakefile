@@ -12,7 +12,9 @@ require 'yaml'
 Dotenv.load
 
 desc 'Update staging version on Amazon S3 (with drafts)'
-task :staging do |t|
+task :staging, :with_drafts do |t,args|
+  args.with_defaults with_drafts: true
+  with_drafts = !!args[:with_drafts].to_s.match(/\Atrue\Z/i)
 
   source = File.expand_path File.dirname(__FILE__)
 
@@ -28,7 +30,7 @@ task :staging do |t|
     conf = Jekyll.configuration({
       'source' => source,
       'destination' => tmp,
-      'show_drafts' => true
+      'show_drafts' => with_drafts
     })
 
     Jekyll::Site.new(conf).process
@@ -46,7 +48,11 @@ task :staging do |t|
       threads: 4
     })
 
-    puts Paint["\nAll good!\n", :bold, :green]
+    puts
+    puts Paint["All good!", :bold, :green]
+    puts
+    puts 'http://probedock-blog-staging.s3-website.eu-central-1.amazonaws.com/'
+    puts
   end
 end
 
