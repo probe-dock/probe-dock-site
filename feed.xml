@@ -6,9 +6,46 @@
 </description>
     <link>http://probedock.io/</link>
     <atom:link href="http://probedock.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 09 Sep 2015 20:10:14 +0200</pubDate>
-    <lastBuildDate>Wed, 09 Sep 2015 20:10:14 +0200</lastBuildDate>
+    <pubDate>Tue, 29 Sep 2015 10:47:49 +0200</pubDate>
+    <lastBuildDate>Tue, 29 Sep 2015 10:47:49 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Probe Dock selected for the CTI Business Concept course</title>
+        <description>&lt;p&gt;Probe Dock has been selected as the project our team will work on in the &lt;a href=&quot;http://www.cti-entrepreneurship.ch/en/module-en/business-concept/&quot;&gt;CTI Business Concept course&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For 10 evenings, we will learn to become entrepreneurs. We will have access to numerous resources and &lt;a href=&quot;http://west.cti-entrepreneurship.ch/en/trainers/&quot;&gt;people&lt;/a&gt; to challenge and develop our business idea.&lt;/p&gt;
+
+&lt;p&gt;The Business Concept course is one of four modules offered by the &lt;a href=&quot;https://www.kti.admin.ch/kti/en/home.html&quot;&gt;Commission for Technology and Innovation (CTI)&lt;/a&gt;, a Swiss program for technology startups.&lt;/p&gt;
+
+&lt;h2 id=&quot;about-the-course&quot;&gt;About the course&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Would you like to become an entrepreneur by creating or joining a knowledge- or technology-based start-up company? The “Business Concept” module will teach you how to think and act like an entrepreneur, how to transform an idea into a business concept and gain theoretical and practical expertise to play multiple key roles in a start-up, or to set up you own company.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;content&quot;&gt;Content&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Entrepreneurial thinking&lt;/li&gt;
+  &lt;li&gt;Value proposition and service &amp;amp; product development&lt;/li&gt;
+  &lt;li&gt;Protection of innovation&lt;/li&gt;
+  &lt;li&gt;Business relations with customers&lt;/li&gt;
+  &lt;li&gt;Financial planning&lt;/li&gt;
+  &lt;li&gt;Financing&lt;/li&gt;
+  &lt;li&gt;Building a strong team&lt;/li&gt;
+  &lt;li&gt;Presenting your business ideas&lt;/li&gt;
+  &lt;li&gt;Start-up ecosystem&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 29 Sep 2015 12:00:00 +0200</pubDate>
+        <link>http://probedock.io/blog/news/2015/09/29/probedock-selected-for-the-cti-business-concept-course/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/news/2015/09/29/probedock-selected-for-the-cti-business-concept-course/</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
     
       <item>
         <title>Probe Dock v0.1.8 Released</title>

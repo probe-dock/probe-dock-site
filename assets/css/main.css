@@ -3441,11 +3441,17 @@ select {
   margin-top: 80px;
 }
 .blog-page .blog-entry-content h2 {
-  margin-top: 4em;
+  margin-top: 3em;
   margin-bottom: 1em;
+}
+.blog-page .blog-entry-content h3 {
+  margin-top: 1.4em;
 }
 .blog-page .blog-entry-content img {
   max-width: 100%;
+}
+.blog-page .blog-entry-content blockquote p:last-child {
+  margin-bottom: 0;
 }
 .footer .footer-col .connect a {
   color: #b3b3b3;
