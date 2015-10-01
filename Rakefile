@@ -63,7 +63,7 @@ task :staging, :with_drafts, :open_browser do |t,args|
 end
 
 desc 'Update GitHub pages (compile site in "source" branch and commit to "master")'
-task :pages, :open_browser do |t|
+task :pages, :open_browser do |t,args|
   args.with_defaults open_browser: true
   open_browser = !!args[:open_browser].to_s.match(/\Atrue\Z/i)
 
