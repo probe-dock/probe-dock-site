@@ -12,4 +12,5 @@ group :development do
   gem 'jekyll'
   gem 'paint'
   gem 's3_uploader'
+  gem 'launchy'
 end
