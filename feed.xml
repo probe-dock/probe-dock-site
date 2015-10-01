@@ -6,9 +6,42 @@
 </description>
     <link>http://probedock.io/</link>
     <atom:link href="http://probedock.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Sep 2015 10:47:49 +0200</pubDate>
-    <lastBuildDate>Tue, 29 Sep 2015 10:47:49 +0200</lastBuildDate>
+    <pubDate>Thu, 01 Oct 2015 20:21:42 +0200</pubDate>
+    <lastBuildDate>Thu, 01 Oct 2015 20:21:42 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Probe Dock at the EBU DevCon 2015!</title>
+        <description>&lt;p&gt;We will tell the story behind Probe Dock at the &lt;a href=&quot;https://tech.ebu.ch/events/devcon15&quot;&gt;EBU Developer Conference&lt;/a&gt; on October 7! Our session will be at 12:10, and the conference will take place at &lt;a href=&quot;http://maps.google.ch/maps?f=q&amp;amp;source=s_q&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=european+broadcasting+union&amp;amp;sll=46.205393,6.13555&amp;amp;sspn=0.073776,0.167713&amp;amp;ie=UTF8&amp;amp;hq=european+broadcasting+union&amp;amp;hnear=&amp;amp;ll=46.236378,6.135521&amp;amp;spn=0.070766,0.167713&amp;amp;z=13&amp;amp;iwloc=A&quot;&gt;EBU Headquarters&lt;/a&gt; in Geneva.&lt;/p&gt;
+
+&lt;p&gt;This third EBU Developer Conference will provide an opportunity to learn about best practices in software engineering and get hands-on with current development and deployment tools. Participants will pick up new ideas to run software-driven broadcast infrastructures and to improve their engineering workflows and overall development teams’ organisation.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;DevCon 2015 features keynotes from Cornelius Suermann (PayPal), Bob Uva (New Relic) and Ken Schwaber (Scrum.org).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The conference sessions cover Big Data &amp;amp; Recommendation Systems, Security, Identity Management, DevOps, Distributed Applications, Open Source. Agile Management, Applications for Connected TVs.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Hands-on Workshops are provided on CPA, D3.js, and Visual Radio and there will be an Agile Clinic, a pitching session and an informal drinks night!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;our-presentation-from-nothing-to-thousands-of-tests&quot;&gt;Our presentation: From nothing to thousands of tests&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;We worked in a startup where over 6 years the technology team grew from 1 to 25 people, and from nothing we built an automated test suite with thousands of tests. We will tell the story of how we used automated testing as a cornerstone of agile methodologies to increase software quality, and how we solved the main issues we encountered: How do you show the value of automated tests to developers and motivate them to write more? How can you write better tests? How can you have a comprehensive view of software quality across components and technologies?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Thu, 01 Oct 2015 22:00:00 +0200</pubDate>
+        <link>http://probedock.io/blog/news/2015/10/01/probedock-at-ebu-devcon/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/news/2015/10/01/probedock-at-ebu-devcon/</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
     
       <item>
         <title>Probe Dock selected for the CTI Business Concept course</title>
