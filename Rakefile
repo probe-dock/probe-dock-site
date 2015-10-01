@@ -1,6 +1,7 @@
 require 'dotenv'
 require 'fileutils'
 require 'jekyll'
+require 'launchy'
 require 'paint'
 require 'rake'
 require 'rbconfig'
@@ -12,9 +13,10 @@ require 'yaml'
 Dotenv.load
 
 desc 'Update staging version on Amazon S3 (with drafts)'
-task :staging, :with_drafts do |t,args|
-  args.with_defaults with_drafts: true
+task :staging, :with_drafts, :open_browser do |t,args|
+  args.with_defaults with_drafts: true, open_browser: true
   with_drafts = !!args[:with_drafts].to_s.match(/\Atrue\Z/i)
+  open_browser = !!args[:open_browser].to_s.match(/\Atrue\Z/i)
 
   source = File.expand_path File.dirname(__FILE__)
 
@@ -48,16 +50,22 @@ task :staging, :with_drafts do |t,args|
       threads: 4
     })
 
+    url = 'http://probedock-blog-staging.s3-website.eu-central-1.amazonaws.com/'
+
     puts
     puts Paint["All good!", :bold, :green]
     puts
-    puts 'http://probedock-blog-staging.s3-website.eu-central-1.amazonaws.com/'
+    puts url
     puts
+
+    Launchy.open url if open_browser
   end
 end
 
 desc 'Update GitHub pages (compile site in "source" branch and commit to "master")'
-task :pages do |t|
+task :pages, :open_browser do |t|
+  args.with_defaults open_browser: true
+  open_browser = !!args[:open_browser].to_s.match(/\Atrue\Z/i)
 
   source = File.expand_path File.dirname(__FILE__)
   remote = 'git@github.com:probedock/probedock.github.io.git'
@@ -105,7 +113,15 @@ task :pages do |t|
     puts Paint["\nPushing...\n", :yellow]
     raise 'ERROR: could not push to master' unless system "git push origin master"
 
-    puts Paint["\nAll good!\n", :bold, :green]
+    url = 'http://probedock.io/'
+
+    puts
+    puts Paint["All good!", :bold, :green]
+    puts
+    puts url
+    puts
+
+    Launchy.open url if open_browser
   end
 end
 
