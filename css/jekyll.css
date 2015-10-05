@@ -1,3 +1,11 @@
+.supported-test-frameworks {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+.getting-started .signup {
+  margin-top: 1.4em; }
+
 /**
  * Syntax highlighting styles
  */

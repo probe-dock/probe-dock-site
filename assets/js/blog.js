@@ -4,7 +4,14 @@ $(document).ready(function() {
     axis: 'y'
   });
 
-  console.log('foo');
+  // http://desandro.github.io/masonry/index.html
+  var $container = $('#blog-masonry');
+  $container.imagesLoaded(function(){
+    $container.masonry({
+      itemSelector : '.post'
+    });
+  });
+
   $('.blog-entry-content a').on('click', function(event) {
 
     var target = $(event.target);

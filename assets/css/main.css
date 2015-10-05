@@ -2111,7 +2111,8 @@ select {
   text-align: left;
 }
 .story-section .about {
-  padding: 30px;
+  padding: 30px 120px;
+  font-size: 1.1em;
 }
 .story-section .belife {
   border-color: #f19180;
@@ -3235,7 +3236,7 @@ select {
     top: 66px;
   }
   .footer-col {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   .modal.modal-video .modal-dialog {
     width: auto;

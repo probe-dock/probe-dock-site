@@ -4,7 +4,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 
   <head>
-  <title>Probe Dock</title>
+  <title>Getting Started</title>
   <!-- Meta -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,12 +29,12 @@
     <script src="/https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-  <link rel="canonical" href="http://probedock.io/">
+  <link rel="canonical" href="http://probedock.io/getting-started/">
   <link rel="alternate" type="application/rss+xml" title="Probe Dock" href="http://probedock.io/feed.xml" />
 </head>
 
 
-  <body class="home-page">
+  <body class="about-page">
 
     <header id="header" class="header navbar-fixed-top ">
   <div class="container">
@@ -62,50 +62,88 @@
 </header>
 
 
-    <div class="page-content">
+    <div class="headline-bg about-headline-bg">
+</div>
+
+<div class="page-content">
   <div class="wrapper">
-    <div class="bg-slider-wrapper">
-        <div class="flexslider bg-slider">
-            <ul class="slides">
-                <li class="slide slide-1"></li>
-                <li class="slide slide-2"></li>
-                <li class="slide slide-3"></li>
-            </ul>
-        </div>
-    </div>
-
-    <section class="promo section section-on-bg">
-        <div class="container text-center">
-            <h2 class="title">A new stand on software quality!</h2>
-            <p class="intro">Probe Dock gathers the results of automated tests performed on all system components (mobile, cloud, etc). The data, gathered in vast amounts, is analyzed to offer insights to developers, product owners and QA managers.</p>
-            <p><a class="btn btn-cta btn-cta-primary" href="/getting-started/">Try Probe Dock</a></p>
-        </div>
-    </section>
-
-    <div class="sections-wrapper">
-
-        <section id="why" class="section why">
-            <div class="container">
-                <h2 class="title text-center">Latest News</h2>
-                <p class="intro text-center"><a href="/blog/">Check out our blog</a></p>
-                <div class="row item">
-                    <div class="content col-md-4 col-sm-12 col-xs-12">
-                        <h3 class="title">Probe Dock v0.1.9 Released</h3>
-                        <div class="desc">
-                          <p><strong>Probe Dock v0.1.9</strong> is now available!
-It brings you a <a href="https://trial.probedock.io/register">trial version</a> where anyone can register an account to test Probe Dock.</p>
-
-
-                          <a class="read-more" href="/blog/releases/2015/10/05/probedock-v0_1_9/">Read more <i class="fa fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
-                        <a href="/blog/releases/2015/10/05/probedock-v0_1_9/"><img class="img-responsive" src="/media/probedock-v0_1_9/banner.jpg" alt="Probe Dock v0.1.9 Released" /></a>
-                    </figure>
-                </div>
+    <section class="story-section section section-on-bg getting-started">
+    <h2 class="title container text-center">Getting Started</h2>
+    <div class="story-container container text-center">
+        <div class="story-container-inner" >
+            <div class="about text-center">
+                <p>You can start testing Probe Dock right now! All you need is a project with automated tests (see the list of <a href="#supported-test-frameworks">supported test frameworks</a>). Create a trial account and follow the step-by-step instructions.</p>
+                <p>As we are still in the early stages, trial accounts are temporary and erased every Sunday. If you like Probe Dock and would like to use it, please <a href="#contact">contact us</a> to join our invite-only <a href="https://demo.probedock.io/probedock">demo version</a>. If your favorite test framework is not supported, please leave us a note so we can do something about it!</p>
+                <p>
+                  <a class="btn btn-cta btn-cta-secondary signup" href="https://trial.probedock.io/register">Sign up for a trial account</a>
+                </p>
             </div>
-        </section>
+
+            <div class="press-kit text-center">
+                <a name="supported-test-frameworks"></a>
+                <h3 class="title">Supported Test Frameworks</h3>
+                <p>These are the test frameworks we currently support.</p>
+                <ul class="supported-test-frameworks">
+                  <li>
+                    <a href="https://github.com/probedock/probedock-karma"><strong>Karma</strong>
+                    -
+                    <a href="https://github.com/probedock/probedock-demo-karma">demo project</strong>
+                  </li>
+                  <li>
+                    <a href="https://github.com/probedock/probedock-grunt-jasmine"><strong>Jasmine (with Grunt.js)</strong></a>
+                    -
+                    <a href="https://github.com/probedock/probedock-demo-grunt-jasmine-protractor">demo project</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/probedock/probedock-junit"><strong>JUnit</strong></a>
+                    -
+                    <a href="https://github.com/probedock/probedock-demo-junit">demo project</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/probedock/probedock-rspec"><strong>RSpec</strong></a>
+                    -
+                    <a href="https://github.com/probedock/probedock-demo-rspec">demo project</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/probedock/probedock-itf"><strong>Java ITF</strong></a>
+                    -
+                    <a href="https://github.com/probedock/probedock-demo-itf">demo project</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/probedock/probedock-cucumber-ruby"><strong>Cucumber (Ruby)</strong></a>
+                  </li>
+                </ul>
+                <a class="btn btn-cta btn-cta-secondary" href="https://github.com/probedock/probedock-probes">GitHub Repository &amp; Documentation</a>
+                <p>Please <a href="#contact">contact us</a> if you need more materials.</p>
+            </div>
+        </div>
     </div>
+</section>
+
+<!-- ******Steps Section****** --> 
+<section class="steps section">
+    <div class="container">
+        <h2 class="title text-center">3 simple steps to get you started with Probe Dock</h2>
+        <div class="row">
+             <div class="step text-center col-md-4 col-sm-4 col-xs-12">
+                 <h3 class="title"><span class="number">1</span><br /><span class="text">Sign up for a trial account</span></h3>
+                 <p>Trial accounts are free but time-limited (they are reset weekly on Sunday). During the signup process, you will also create an organization (e.g. your company).</p>
+             </div><!--//step-->
+             <div class="step text-center col-md-4 col-sm-4 col-xs-12">
+                 <h3 class="title"><span class="number">2</span><br /><span class="text">Add your project to Probe Dock</span></h3>
+                 <p>Once you have completed the signup process, you can add your project to your Probe Dock organization.</p>
+             </div><!--//step-->
+             <div class="step text-center col-md-4 col-sm-4 col-xs-12">
+                 <h3 class="title"><span class="number">3</span><br /><span class="text">Plug our probes into your test framework(s)</span></h3>
+                 <p><a href="#supported-test-frameworks">Find the probe</a> for your favorite test framework and follow the setup instructions. Once done, simply run your test suite to see the results on Probe Dock!</p>
+             </div><!--//step-->
+        </div><!--//row-->
+        
+        <div class="text-center"><a class="btn btn-cta btn-cta-primary" href="https://trial.probedock.io/register">Sign up for a trial account</a></div>
+        
+    </div><!--//container-->        
+</section>
+
   </div>
 </div>
 
