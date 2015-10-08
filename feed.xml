@@ -6,9 +6,31 @@
 </description>
     <link>http://probedock.io/</link>
     <atom:link href="http://probedock.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Oct 2015 16:04:34 +0200</pubDate>
-    <lastBuildDate>Mon, 05 Oct 2015 16:04:34 +0200</lastBuildDate>
+    <pubDate>Thu, 08 Oct 2015 13:09:31 +0200</pubDate>
+    <lastBuildDate>Thu, 08 Oct 2015 13:09:31 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Probe Dock Soft-Shake Schedule</title>
+        <description>&lt;p&gt;&lt;a href=&quot;/blog/news/2015/09/01/probedock-at-soft-shake/&quot;&gt;As promised&lt;/a&gt;, here’s the schedule for our Presentation at the &lt;a href=&quot;http://soft-shake.ch/2015/en/&quot;&gt;Soft-Shake 2015&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Presentation:&lt;/strong&gt; Test analytics: exploitez la richesse de vos tests automatisés&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Date:&lt;/strong&gt; October 22nd&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Session:&lt;/strong&gt; Slot 0, room 1, 10:30&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note that the session’s start time may yet change.
+We will update this post if necessary.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 08 Oct 2015 15:00:00 +0200</pubDate>
+        <link>http://probedock.io/blog/releases/2015/10/08/probedock-soft-shake-schedule/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/releases/2015/10/08/probedock-soft-shake-schedule/</guid>
+        
+        
+        <category>releases</category>
+        
+      </item>
     
       <item>
         <title>Probe Dock v0.1.9 Released</title>
