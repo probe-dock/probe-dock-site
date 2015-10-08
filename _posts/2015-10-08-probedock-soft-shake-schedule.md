@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Probe Dock Soft-Shake Schedule"
-categories: releases
+categories: news
 date: 2015-10-08 13:00:00
 media_folder: /media/probedock-soft-shake-schedule
 ---
