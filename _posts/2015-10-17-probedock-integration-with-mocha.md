@@ -2,7 +2,7 @@
 layout: post
 title: "Integrating Probe Dock with Mocha"
 categories: howto
-date: 2015-10-11 13:00:00
+date: 2015-10-17 13:00:00
 media_folder: /media/2015-10-17-probedock-integration-with-mocha
 ---
 
