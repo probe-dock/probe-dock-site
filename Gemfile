@@ -13,4 +13,5 @@ group :development do
   gem 'paint'
   gem 's3_uploader'
   gem 'launchy'
+  gem 'rake'
 end
