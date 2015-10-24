@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using Probe Dock with Jasmine2"
+title: "Using Probe Dock with Jasmine 2"
 categories: roadmap
 date: 2015-10-24 13:00:00
 media_folder: /media/2015-10-24-probedock-with-jasmine2
