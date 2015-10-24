@@ -37,7 +37,7 @@ body_classes: [home-page]
                         </div>
                     </div>
                     <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
-                        <a href="{{ site.posts.first.url }}"><img class="img-responsive" src="{{ site.posts.first.media_folder }}/banner.jpg" alt="{{ site.posts.first.title }}" /></a>
+                        <a href="{{ site.posts.first.url }}"><img class="img-responsive" src="{{ site.posts.first.media_folder }}/{% if site.posts.first.banner_file %}{{ site.posts.first.banner_file }}{% else %}banner.jpg{% endif %}" alt="{{ site.posts.first.title }}" /></a>
                     </figure>
                 </div>
             </div>

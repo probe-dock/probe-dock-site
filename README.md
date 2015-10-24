@@ -77,4 +77,4 @@ Run the following task to build the site and push it to GitHub Pages:
 
 Go to [http://probedock.io/](http://probedock.io/) to view the generated site.
 
-**Note:** this builds from the latest commit on the *local master branch* (local modifications will *not* be included) with drafts disabled.
+**Note:** this builds the site from the current directory with drafts disabled.
