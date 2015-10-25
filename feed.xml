@@ -6,8 +6,8 @@
 </description>
     <link>http://probedock.io/</link>
     <atom:link href="http://probedock.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Oct 2015 21:14:59 +0200</pubDate>
-    <lastBuildDate>Thu, 22 Oct 2015 21:14:59 +0200</lastBuildDate>
+    <pubDate>Sun, 25 Oct 2015 12:00:33 +0900</pubDate>
+    <lastBuildDate>Sun, 25 Oct 2015 12:00:33 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -58,9 +58,9 @@ and tracks day-to-day developer activity in addition to continuous integration p
 &lt;p&gt;Its goal is to offer many more insights into testing trends and team behavior,
 and to correlate the data of testing activities with other data such as test coverage and bug reports.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 22 Oct 2015 22:00:00 +0200</pubDate>
-        <link>http://probedock.io/blog/news/2015/10/22/probedock-soft-shake-presentation/</link>
-        <guid isPermaLink="true">http://probedock.io/blog/news/2015/10/22/probedock-soft-shake-presentation/</guid>
+        <pubDate>Fri, 23 Oct 2015 05:00:00 +0900</pubDate>
+        <link>http://probedock.io/blog/news/2015/10/23/probedock-soft-shake-presentation/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/news/2015/10/23/probedock-soft-shake-presentation/</guid>
         
         
         <category>news</category>
@@ -266,7 +266,7 @@ and to correlate the data of testing activities with other data such as test cov
 
 &lt;p&gt;If you are using another test framework, it should not be too difficult to adapt our code to your needs. It is almost always about using the test framework to launch a runner, listen to test result events and ask the Probe Dock client to send the results to the server.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 11 Oct 2015 15:00:00 +0200</pubDate>
+        <pubDate>Sun, 11 Oct 2015 22:00:00 +0900</pubDate>
         <link>http://probedock.io/blog/howto/2015/10/11/probedock-integration-with-mocha/</link>
         <guid isPermaLink="true">http://probedock.io/blog/howto/2015/10/11/probedock-integration-with-mocha/</guid>
         
@@ -277,7 +277,7 @@ and to correlate the data of testing activities with other data such as test cov
     
       <item>
         <title>Probe Dock Soft-Shake Schedule</title>
-        <description>&lt;p&gt;&lt;a href=&quot;/blog/news/2015/09/01/probedock-at-soft-shake/&quot;&gt;As promised&lt;/a&gt;, here’s the schedule for our Presentation at the &lt;a href=&quot;http://soft-shake.ch/2015/en/&quot;&gt;Soft-Shake 2015&lt;/a&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;/blog/news/2015/09/02/probedock-at-soft-shake/&quot;&gt;As promised&lt;/a&gt;, here’s the schedule for our Presentation at the &lt;a href=&quot;http://soft-shake.ch/2015/en/&quot;&gt;Soft-Shake 2015&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Presentation:&lt;/strong&gt; Test analytics: exploitez la richesse de vos tests automatisés&lt;/li&gt;
@@ -288,7 +288,7 @@ and to correlate the data of testing activities with other data such as test cov
 &lt;p&gt;Note that the session’s start time may yet change.
 We will update this post if necessary.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 08 Oct 2015 15:00:00 +0200</pubDate>
+        <pubDate>Thu, 08 Oct 2015 22:00:00 +0900</pubDate>
         <link>http://probedock.io/blog/news/2015/10/08/probedock-soft-shake-schedule/</link>
         <guid isPermaLink="true">http://probedock.io/blog/news/2015/10/08/probedock-soft-shake-schedule/</guid>
         
@@ -307,9 +307,9 @@ They will be reset every week on Sunday.&lt;/p&gt;
 
 &lt;p&gt;Check out our &lt;a href=&quot;http://probedock.io/getting-started/&quot;&gt;Getting Started&lt;/a&gt; page!&lt;/p&gt;
 </description>
-        <pubDate>Mon, 05 Oct 2015 18:00:00 +0200</pubDate>
-        <link>http://probedock.io/blog/releases/2015/10/05/probedock-v0_1_9/</link>
-        <guid isPermaLink="true">http://probedock.io/blog/releases/2015/10/05/probedock-v0_1_9/</guid>
+        <pubDate>Tue, 06 Oct 2015 01:00:00 +0900</pubDate>
+        <link>http://probedock.io/blog/releases/2015/10/06/probedock-v0_1_9/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/releases/2015/10/06/probedock-v0_1_9/</guid>
         
         
         <category>releases</category>
@@ -340,9 +340,9 @@ They will be reset every week on Sunday.&lt;/p&gt;
   &lt;p&gt;&lt;em&gt;We worked in a startup where over 6 years the technology team grew from 1 to 25 people, and from nothing we built an automated test suite with thousands of tests. We will tell the story of how we used automated testing as a cornerstone of agile methodologies to increase software quality, and how we solved the main issues we encountered: How do you show the value of automated tests to developers and motivate them to write more? How can you write better tests? How can you have a comprehensive view of software quality across components and technologies?&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
-        <pubDate>Thu, 01 Oct 2015 22:00:00 +0200</pubDate>
-        <link>http://probedock.io/blog/news/2015/10/01/probedock-at-ebu-devcon/</link>
-        <guid isPermaLink="true">http://probedock.io/blog/news/2015/10/01/probedock-at-ebu-devcon/</guid>
+        <pubDate>Fri, 02 Oct 2015 05:00:00 +0900</pubDate>
+        <link>http://probedock.io/blog/news/2015/10/02/probedock-at-ebu-devcon/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/news/2015/10/02/probedock-at-ebu-devcon/</guid>
         
         
         <category>news</category>
@@ -377,7 +377,7 @@ They will be reset every week on Sunday.&lt;/p&gt;
   &lt;li&gt;Start-up ecosystem&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Tue, 29 Sep 2015 12:00:00 +0200</pubDate>
+        <pubDate>Tue, 29 Sep 2015 19:00:00 +0900</pubDate>
         <link>http://probedock.io/blog/news/2015/09/29/probedock-selected-for-the-cti-business-concept-course/</link>
         <guid isPermaLink="true">http://probedock.io/blog/news/2015/09/29/probedock-selected-for-the-cti-business-concept-course/</guid>
         
@@ -453,9 +453,9 @@ Finally, toggle buttons allow you to show/hide &lt;strong&gt;passed results, fai
 
 &lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_8/reports-table.png&quot; alt=&quot;Reports table&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Wed, 09 Sep 2015 22:00:00 +0200</pubDate>
-        <link>http://probedock.io/blog/releases/2015/09/09/probedock-v0_1_8/</link>
-        <guid isPermaLink="true">http://probedock.io/blog/releases/2015/09/09/probedock-v0_1_8/</guid>
+        <pubDate>Thu, 10 Sep 2015 05:00:00 +0900</pubDate>
+        <link>http://probedock.io/blog/releases/2015/09/10/probedock-v0_1_8/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/releases/2015/09/10/probedock-v0_1_8/</guid>
         
         
         <category>releases</category>
@@ -485,9 +485,9 @@ The title of our presentation is: &lt;strong&gt;Test analytics: exploitez la ric
 &lt;p&gt;We’ll give a more precise date and time when the final conference schedule is published on September 13.
 The conference will take place at &lt;a href=&quot;http://hepia.hesge.ch&quot;&gt;Hepia&lt;/a&gt; in Geneva.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 01 Sep 2015 23:00:00 +0200</pubDate>
-        <link>http://probedock.io/blog/news/2015/09/01/probedock-at-soft-shake/</link>
-        <guid isPermaLink="true">http://probedock.io/blog/news/2015/09/01/probedock-at-soft-shake/</guid>
+        <pubDate>Wed, 02 Sep 2015 06:00:00 +0900</pubDate>
+        <link>http://probedock.io/blog/news/2015/09/02/probedock-at-soft-shake/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/news/2015/09/02/probedock-at-soft-shake/</guid>
         
         
         <category>news</category>
@@ -604,9 +604,9 @@ The new Register button is available in the menu bar when not logged in:&lt;/p&g
   &lt;li&gt;&lt;strong&gt;BUGFIX:&lt;/strong&gt; fixed the pagination controls of the users table that were not showing (visible only to Probe Dock admins).&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Wed, 26 Aug 2015 22:00:00 +0200</pubDate>
-        <link>http://probedock.io/blog/releases/2015/08/26/probedock-v0_1_7/</link>
-        <guid isPermaLink="true">http://probedock.io/blog/releases/2015/08/26/probedock-v0_1_7/</guid>
+        <pubDate>Thu, 27 Aug 2015 05:00:00 +0900</pubDate>
+        <link>http://probedock.io/blog/releases/2015/08/27/probedock-v0_1_7/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/releases/2015/08/27/probedock-v0_1_7/</guid>
         
         
         <category>releases</category>
@@ -619,7 +619,7 @@ The new Register button is available in the menu bar when not logged in:&lt;/p&g
 
 &lt;p&gt;We will use this blog to keep you informed of Probe Dock news and releases.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 19 Aug 2015 16:00:00 +0200</pubDate>
+        <pubDate>Wed, 19 Aug 2015 23:00:00 +0900</pubDate>
         <link>http://probedock.io/blog/news/2015/08/19/welcome-to-probedock/</link>
         <guid isPermaLink="true">http://probedock.io/blog/news/2015/08/19/welcome-to-probedock/</guid>
         
