@@ -2,8 +2,8 @@
 layout: post
 title: "Integrating Probe Dock and Probe Dock RT into a Java EE project"
 categories: howto
-date: 2015-10-20 15:00:00
-media_folder: /media/2015-10-20-probedock-javaee-demo
+date: 2015-11-18 15:00:00
+media_folder: /media/probedock-javaee-demo
 ---
 
 When you build a Java EE project, you can use a variety of automated tests. Unit tests, integration tests, tests for your REST API. It is also quite common to have functional tests for the web user interface.
