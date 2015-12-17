@@ -2,7 +2,7 @@
 layout: post
 title: "Integrating Probe Dock and Probe Dock RT into a Java EE project"
 categories: howto
-date: 2015-11-18 15:00:00
+date: 2015-12-17 14:00:00
 media_folder: /media/probedock-javaee-demo
 ---
 
