@@ -6,9 +6,141 @@
 </description>
     <link>http://probedock.io/</link>
     <atom:link href="http://probedock.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 Nov 2015 12:49:37 +0100</pubDate>
-    <lastBuildDate>Thu, 19 Nov 2015 12:49:37 +0100</lastBuildDate>
+    <pubDate>Thu, 17 Dec 2015 13:55:41 +0100</pubDate>
+    <lastBuildDate>Thu, 17 Dec 2015 13:55:41 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Integrating Probe Dock and Probe Dock RT into a Java EE project</title>
+        <description>&lt;p&gt;When you build a Java EE project, you can use a variety of automated tests. Unit tests, integration tests, tests for your REST API. It is also quite common to have functional tests for the web user interface.&lt;/p&gt;
+
+&lt;p&gt;We have prepared a full stack Java EE demo project where you can discover step by step how to integrate multiple test technologies with Probe Dock.&lt;/p&gt;
+
+&lt;h3 id=&quot;system-under-test&quot;&gt;System under test&lt;/h3&gt;
+
+&lt;p&gt;The &lt;strong&gt;system&lt;/strong&gt; under test is an object-oriented calculator with four operations: &lt;code&gt;div&lt;/code&gt;, &lt;code&gt;sub&lt;/code&gt;, &lt;code&gt;mul&lt;/code&gt; and &lt;code&gt;add&lt;/code&gt;. Its REST API offers a simple language to express more complex operation (e.g. &lt;code&gt;(2 + (3 - 1))&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://github.com/probedock/probedock-demo-jee-stack/tree/master/probedock-demo-jee-stack-notest&quot;&gt;demo project (without tests)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here’s a sample payload for the REST API.
+It represents the calculation &lt;code&gt;2 + (10 - ((15 / 3) * 4))&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;add&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;quot;left&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;quot;rightOperation&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;sub&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;left&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;rightOperation&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;mul&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;quot;leftOperation&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;div&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;quot;left&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;quot;right&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;quot;right&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Submitting this payload with a POST request on &lt;code&gt;http://localhost:8080/jee-stack/api/calculator&lt;/code&gt; will yield the following result:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;quot;result&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;-8&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;unit-tests&quot;&gt;Unit tests&lt;/h3&gt;
+
+&lt;p&gt;In the &lt;a href=&quot;https://github.com/probedock/probedock-demo-jee-stack/tree/master/probedock-demo-jee-stack-unit&quot;&gt;probedock-demo-jee-stack-unit&lt;/a&gt; project, we added JUnit tests as the first test technology in our stack. We have already integrated Probe Dock and Probe Dock RT into this project. Go through the README to see exactly what we did.&lt;/p&gt;
+
+&lt;p&gt;This is a short summary of modifications compared to the initial project without tests:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Added Probe Dock and test dependencies&lt;/li&gt;
+  &lt;li&gt;Configured Maven Surefire plugin for Probe Dock&lt;/li&gt;
+  &lt;li&gt;Wrote a few unit tests with JUnit&lt;/li&gt;
+  &lt;li&gt;Added the &lt;code&gt;probedock.yml&lt;/code&gt; project configuration file&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;integration-tests&quot;&gt;Integration tests&lt;/h3&gt;
+
+&lt;p&gt;In the &lt;a href=&quot;https://github.com/probedock/probedock-demo-jee-stack/tree/master/probedock-demo-jee-stack-integration&quot;&gt;probedock-demo-jee-stack-integration&lt;/a&gt; project, we introduced integration tests with &lt;a href=&quot;http://arquillian.org&quot;&gt;Arquillian&lt;/a&gt; in addition to unit tests.&lt;/p&gt;
+
+&lt;p&gt;Arquillian is a Java EE test framework which runs the tests in a lightweight application container where all Java EE components are managed as you are used to.&lt;/p&gt;
+
+&lt;p&gt;This is a summary of modifications compared to the initial project, including the previous setup of the unit tests:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Added Probe Dock and test (JUnit, Arquillian, …) dependencies&lt;/li&gt;
+  &lt;li&gt;Added the dependency management configuration for Arquillian for the version management&lt;/li&gt;
+  &lt;li&gt;Configured Maven Surefire plugin for Probe Dock&lt;/li&gt;
+  &lt;li&gt;Added several configuration files required by Arquillian&lt;/li&gt;
+  &lt;li&gt;We have written a few integration tests with JUnit and added the required annotations and methods for Arquillian. Each test class will have the responsibility to create its own archive to be run by Arquillian.&lt;/li&gt;
+  &lt;li&gt;Added the &lt;code&gt;probedock.yml&lt;/code&gt; project configuration file&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;api-tests&quot;&gt;API tests&lt;/h3&gt;
+
+&lt;p&gt;In the &lt;a href=&quot;https://github.com/probedock/probedock-demo-jee-stack/tree/master/probedock-demo-jee-stack-api&quot;&gt;probedock-demo-jee-stack-api&lt;/a&gt; project, we introduced API tests. We used &lt;a href=&quot;https://github.com/probedock/java-api-test&quot;&gt;java-api-test&lt;/a&gt; to write our API tests.&lt;/p&gt;
+
+&lt;p&gt;The test framework offers an abstraction to make JSON requests on a REST API. It also provides utility methods to make assertions on JSON responses.&lt;/p&gt;
+
+&lt;p&gt;We have also used another library to manage data through JPA: &lt;a href=&quot;https://github.com/probedock/junitee-data-utils&quot;&gt;junitee-data-utils&lt;/a&gt;. This library allows us to populate data through code in the test setup phase.&lt;/p&gt;
+
+&lt;p&gt;With Arquillian, there are two modes to run the tests: the server mode and the client mode. We use the server mode for integration tests, and the client mode for API tests. In the client mode, the tests are run &lt;em&gt;outside&lt;/em&gt; of the application context. Therefore, we cannot inject services in tests directly as they are not managed.&lt;/p&gt;
+
+&lt;p&gt;This is a summary of modifications compared to the initial project, including the previous setups of the unit and integration tests:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Added Probe Dock and test (JUnit, java-api-test, …) dependencies&lt;/li&gt;
+  &lt;li&gt;Added the dependency management configuration for Arquillian for the version management&lt;/li&gt;
+  &lt;li&gt;Configured Maven Surefire plugin for Probe Dock&lt;/li&gt;
+  &lt;li&gt;Added several configuration files required by Arquillian&lt;/li&gt;
+  &lt;li&gt;We have written a few integration tests with JUnit and added the required annotations and methods for Arquillian. Each test class will have the responsibility to create its own archive to be run by Arquillian. In client mode, we also benefit from some injections like the URL where the application is running by Arquillian.&lt;/li&gt;
+  &lt;li&gt;Added the &lt;code&gt;probedock.yml&lt;/code&gt; project configuration file&lt;/li&gt;
+  &lt;li&gt;Added the configuration and code to integrate junitee-data-utils&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;rule-them-all&quot;&gt;Rule them all&lt;/h3&gt;
+
+&lt;p&gt;Finally, we bring all these pieces together. The project &lt;a href=&quot;https://github.com/probedock/probedock-demo-jee-stack/tree/master/probedock-demo-jee-stack-all&quot;&gt;probedock-demo-jee-stack-all&lt;/a&gt; contains the three kinds of tests and a way to run each of them separately or all together.&lt;/p&gt;
+
+&lt;p&gt;We performed the following steps to have all tests running correctly:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;We have combined all the tests into the same project:
+    &lt;ul&gt;
+      &lt;li&gt;We have the standard packages for unit tests.&lt;/li&gt;
+      &lt;li&gt;We have the &lt;code&gt;integration&lt;/code&gt; package for the integration tests.&lt;/li&gt;
+      &lt;li&gt;We have the &lt;code&gt;api&lt;/code&gt; package for the API tests.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;We combined the different configuration files.&lt;/li&gt;
+  &lt;li&gt;We have added the probedock project configuration file with the correct categories by package to make sure integration and API tests are assigned the correct category in Probe Dock.&lt;/li&gt;
+  &lt;li&gt;We have tuned the Maven Surefire plugin configuration to run only the unit tests by default when running the command &lt;code&gt;mvn clean install&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;We added three maven profiles with custom Maven Surefire configurations:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;integration&lt;/code&gt; to run only integration tests with &lt;code&gt;mvn clean install -Pintegration&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;api&lt;/code&gt; to run only API tests tests with &lt;code&gt;mvn clean install -Papi&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;all&lt;/code&gt; to run all tests at once with &lt;code&gt;mvn clean install -Pall&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;Hopefully, this article and the companion &lt;a href=&quot;https://github.com/probedock/probedock-demo-jee-stack&quot;&gt;GitHub repo&lt;/a&gt; have given you a good understanding of what needs to be done in order to integrate different test technologies in a Java EE application. Use our demo project to learn how to integrate Probe Dock into your Java EE projects or any Java application with JUnit-based testing.&lt;/p&gt;
+
+&lt;p&gt;If you use other test frameworks based on JUnit, they will be supported out of the box by the &lt;a href=&quot;https://github.com/probedock/probedock-junit&quot;&gt;Probe Dock JUnit probe&lt;/a&gt;. You simply need to add the listener in the Maven Surefire plugin configuration.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 17 Dec 2015 15:00:00 +0100</pubDate>
+        <link>http://probedock.io/blog/howto/2015/12/17/probedock-javaee-demo/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/howto/2015/12/17/probedock-javaee-demo/</guid>
+        
+        
+        <category>howto</category>
+        
+      </item>
     
       <item>
         <title>Probe Dock is awarded a FIT grant to accelerate innovation in agile testing</title>
@@ -518,38 +650,6 @@ Finally, toggle buttons allow you to show/hide &lt;strong&gt;passed results, fai
         
         
         <category>releases</category>
-        
-      </item>
-    
-      <item>
-        <title>Probe Dock at the Soft-Shake 2015!</title>
-        <description>&lt;p&gt;The &lt;a href=&quot;http://soft-shake.ch/2015/en/&quot;&gt;Soft-Shake&lt;/a&gt; is a multi-disciplinary conference offering a varied range of tracks and topics of interest to the IT community, such as (from last year’s edition):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Agile&lt;/li&gt;
-  &lt;li&gt;Java&lt;/li&gt;
-  &lt;li&gt;Microsoft&lt;/li&gt;
-  &lt;li&gt;Web technologies&lt;/li&gt;
-  &lt;li&gt;Mobile development&lt;/li&gt;
-  &lt;li&gt;Big Data &amp;amp; no SQL&lt;/li&gt;
-  &lt;li&gt;Functional programming&lt;/li&gt;
-  &lt;li&gt;Ruby&lt;/li&gt;
-  &lt;li&gt;Gamification&lt;/li&gt;
-  &lt;li&gt;AI/Robotics&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We will present Probe Dock in the Agile track of this year’s conference on October 22-23!
-The title of our presentation is: &lt;strong&gt;Test analytics: exploitez la richesse de vos tests automatisés&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;We’ll give a more precise date and time when the final conference schedule is published on September 13.
-The conference will take place at &lt;a href=&quot;http://hepia.hesge.ch&quot;&gt;Hepia&lt;/a&gt; in Geneva.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 01 Sep 2015 23:00:00 +0200</pubDate>
-        <link>http://probedock.io/blog/news/2015/09/01/probedock-at-soft-shake/</link>
-        <guid isPermaLink="true">http://probedock.io/blog/news/2015/09/01/probedock-at-soft-shake/</guid>
-        
-        
-        <category>news</category>
         
       </item>
     

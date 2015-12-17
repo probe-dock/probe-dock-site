@@ -75,7 +75,6 @@ task :pages, :open_browser do |t,args|
   current_hash = `git log --pretty=format:'%h' -n 1`
 
   puts Paint["\nCreating temporary repo...", :yellow]
-  puts Paint[Dir.tmpdir, :red]
 
   # create a temporary directory
   Dir.mktmpdir do |tmp|
