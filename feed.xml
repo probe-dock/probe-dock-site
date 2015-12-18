@@ -6,9 +6,120 @@
 </description>
     <link>http://probedock.io/</link>
     <atom:link href="http://probedock.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Dec 2015 13:55:41 +0100</pubDate>
-    <lastBuildDate>Thu, 17 Dec 2015 13:55:41 +0100</lastBuildDate>
+    <pubDate>Fri, 18 Dec 2015 15:23:24 +0100</pubDate>
+    <lastBuildDate>Fri, 18 Dec 2015 15:23:24 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Probe Dock v0.1.11 Released</title>
+        <description>&lt;p&gt;&lt;strong&gt;Probe Dock v0.1.11&lt;/strong&gt; is now available!
+It brings you the ability to build &lt;strong&gt;report permalinks&lt;/strong&gt; and new features for Java probes.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#report-permalinks&quot;&gt;Report permalinks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#junit-assumptions-and-ignored-tests&quot;&gt;JUnit Assumptions Support &amp;amp; Ignored Tests&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rt-arquillian&quot;&gt;Probe Dock RT Arquillian Extension&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#java-category-by-package&quot;&gt;Java Probes Category by Package&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bugfixes&quot;&gt;Bugfixes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;report-permalinks&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;report-permalinks&quot;&gt;Report Permalinks&lt;/h2&gt;
+
+&lt;p&gt;It is now possible to build web links to an automated test run report from a continuous integration environment, such as a nightly build.
+You can send these links in an e-mail to your developers so that they may more easily access the latest reports.&lt;/p&gt;
+
+&lt;p&gt;For now, this feature is limited.
+There are two requirements to be able to build a link to a report:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;You must get the ID of your organization, which you can find in the edition dialog (you must be an organization administrator).&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_11/report-permalinks-org-id.jpg&quot; alt=&quot;Getting your organization ID&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You must submit your test result payloads with an explicit report identifier (UID).&lt;/p&gt;
+
+    &lt;p&gt;You might already be doing this if you are grouping multiple test runs (e.g. from different test frameworks) under one report.
+Basically, you must generate a unique identifier for the report before you run the tests, and set the &lt;code&gt;$PROBEDOCK_TEST_REPORT_UID&lt;/code&gt; environment variable
+&lt;a href=&quot;https://github.com/probedock/probedock-probes#test-run-report-configuration&quot;&gt;as described here&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Once you have this information, you can build a link that will redirect you to the report once it has been generated.
+The format of the link is as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://demo.probedock.io/go/report?organizationId=ORG_ID&amp;amp;uid=UID
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For example, one of the latest Probe Dock reports testing this feature has the UID &lt;code&gt;20151218131619-04ed9e53-4eab-421a-9895-0691cb049ba8&lt;/code&gt;, and the Probe Dock organization ID is &lt;code&gt;6bhni&lt;/code&gt;. The full permalink to that report is therefore:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://demo.probedock.io/go/report?organizationId=6bhni&amp;amp;uid=20151218131619-04ed9e53-4eab-421a-9895-0691cb049ba8&quot;&gt;https://demo.probedock.io/go/report?organizationId=6bhni&amp;amp;uid=20151218131619-04ed9e53-4eab-421a-9895-0691cb049ba8&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that it might take a minute for the link to work after you have submitted the test result payloads,
+as Probe Dock might still be building the full report.
+But once it’s ready, it will serve as a permalink, still working even if you rename your organization.&lt;/p&gt;
+
+&lt;p&gt;In the future, we will update the Probe Dock API, UI and probes so that they will provide the permalinks, saving you the trouble of building them.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;junit-assumptions-and-ignored-tests&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;junit-assumptions-support--ignored-tests&quot;&gt;JUnit Assumptions Support &amp;amp; Ignored Tests&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://github.com/probedock/probedock-junit&quot;&gt;JUnit Probe&lt;/a&gt; has been updated to support &lt;a href=&quot;https://github.com/junit-team/junit/wiki/Assumptions-with-assume&quot;&gt;assumption failures&lt;/a&gt; and ignored tests.
+Both will be sent to Probe Dock but flagged as inactive (shown in yellow).&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://github.com/probedock/probedock-rt-junit&quot;&gt;JUnit RT Probe&lt;/a&gt; has also been updated to support these features.
+These two events prevent the results from being sent to Probe Dock RT.
+But they can be sent when filtering is enabled depending on the testing framework used (e.g. Arquillian).&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;rt-arquillian&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;probe-dock-rt-arquillian-extension&quot;&gt;Probe Dock RT Arquillian Extension&lt;/h2&gt;
+
+&lt;p&gt;A &lt;a href=&quot;https://github.com/probedock/probedock-rt-junit&quot;&gt;Probe Dock RT Arquillian Extension&lt;/a&gt; is available to enable test execution filtering.
+You do not have to use it for your Arquillian tests but it is required if you want to filter test execution.&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://github.com/probedock/probedock-demo-arquillian&quot;&gt;Arquillian integration demo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;java-category-by-package&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;java-probes-category-by-package&quot;&gt;Java Probes Category by Package&lt;/h2&gt;
+
+&lt;p&gt;Java-based probes have a new feature that allows you to change the Probe Dock category of your tests depending on which package they are in.
+This is done through configuration in your &lt;code&gt;probedock.yml&lt;/code&gt; file.
+For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;java:
+  categoriesByPackage:
+    io.probedock.integration.*: Integration
+    io.probedock.api**: API
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The pattern matching is based on minimatch.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;bugfixes&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;bugfixes&quot;&gt;Bugfixes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fixed the shell scripts generated by the Getting Started page to be compatible with Bash.&lt;/li&gt;
+  &lt;li&gt;Fixed a bug where sending a &lt;code&gt;null&lt;/code&gt; category would cause the test payload processing to fail.&lt;/li&gt;
+  &lt;li&gt;Fixed a bug where that allowed anonymous users to see private organizations in the list of organizations.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;merry-christmas--happy-new-year&quot;&gt;Merry Christmas &amp;amp; Happy New Year!&lt;/h2&gt;
+</description>
+        <pubDate>Fri, 18 Dec 2015 16:00:00 +0100</pubDate>
+        <link>http://probedock.io/blog/releases/2015/12/18/probedock-v0_1_11/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/releases/2015/12/18/probedock-v0_1_11/</guid>
+        
+        
+        <category>releases</category>
+        
+      </item>
     
       <item>
         <title>Integrating Probe Dock and Probe Dock RT into a Java EE project</title>
@@ -574,82 +685,6 @@ They will be reset every week on Sunday.&lt;/p&gt;
         
         
         <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Probe Dock v0.1.8 Released</title>
-        <description>&lt;p&gt;&lt;strong&gt;Probe Dock v0.1.8&lt;/strong&gt; is now available!
-This version brings you new analytics features and a few UI improvements.&lt;/p&gt;
-
-&lt;p&gt;Read more about what has been improved:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#dashboard&quot;&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#report-details&quot;&gt;Report details&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#projects-list&quot;&gt;Projects list&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#reports-table&quot;&gt;Report table&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a name=&quot;dashboard&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;dashboard&quot;&gt;Dashboard&lt;/h2&gt;
-
-&lt;p&gt;The latest reports widget has been renamed to &lt;em&gt;Recent Activity&lt;/em&gt; and gives much more information about test runs.
-In addition to the runner, time and health bar, it now also shows the &lt;strong&gt;project(s)&lt;/strong&gt; and &lt;strong&gt;categories&lt;/strong&gt; of the tests that were run.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_8/dashboard-recent-activity.png&quot; alt=&quot;Dashboard recent activity&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The new tests graph can now be &lt;strong&gt;filtered by project and/or user&lt;/strong&gt;, so you can now which projects have the most tests or who are the most active contributors.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_8/dashboard-new-tests.png&quot; alt=&quot;Dashboard new tests&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;report-details&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;report-details&quot;&gt;Report details&lt;/h2&gt;
-
-&lt;p&gt;With the new report filters, you can display only the results you are interested in:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_8/report-details-filters.png&quot; alt=&quot;Report details filters&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can filter by &lt;strong&gt;category, tags or tickets&lt;/strong&gt;.
-Or you can select tests with a name that matches your &lt;strong&gt;search&lt;/strong&gt;.
-Finally, toggle buttons allow you to show/hide &lt;strong&gt;passed results, failed results, inactive results, results from existing tests and results of new tests&lt;/strong&gt; (tests that were first seen in this test run).&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;(Note that for now, the doughnut chart indicating the overall status of the test run is not affected by applied filters.)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Additionally, the categories of the tests that were run are also shown next to the project(s) under the title:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_8/report-details-categories.png&quot; alt=&quot;Report details categories&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;projects-list&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;projects-list&quot;&gt;Projects list&lt;/h2&gt;
-
-&lt;p&gt;Each project box in the project list now shows a pie chart indicating the &lt;strong&gt;overall status of the last test run&lt;/strong&gt; for that project:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_8/projects-list.png&quot; alt=&quot;Projects list&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;reports-table&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reports-table&quot;&gt;Reports table&lt;/h2&gt;
-
-&lt;p&gt;The following improvements have been made to the reports table:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The &lt;em&gt;Runner(s)&lt;/em&gt; column is now left-aligned.&lt;/li&gt;
-  &lt;li&gt;Milliseconds are no longer displayed for durations longer than a minute.&lt;/li&gt;
-  &lt;li&gt;The &lt;em&gt;Projects&lt;/em&gt; column has become the &lt;em&gt;Details&lt;/em&gt; column and also indicates the &lt;strong&gt;categories&lt;/strong&gt; of the tests that were run.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_8/reports-table.png&quot; alt=&quot;Reports table&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 09 Sep 2015 22:00:00 +0200</pubDate>
-        <link>http://probedock.io/blog/releases/2015/09/09/probedock-v0_1_8/</link>
-        <guid isPermaLink="true">http://probedock.io/blog/releases/2015/09/09/probedock-v0_1_8/</guid>
-        
-        
-        <category>releases</category>
         
       </item>
     
