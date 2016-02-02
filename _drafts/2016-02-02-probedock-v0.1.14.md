@@ -2,7 +2,7 @@
 layout: post
 title: "Probe Dock v0.1.14 Released"
 categories: releases
-date: 2016-02-02 15:00:00
+date: 2016-02-02 19:00:00
 media_folder: /media/probedock-v0_1_14
 ---
 
@@ -38,7 +38,7 @@ Most test frameworks are therefore supported by Probe Dock even if we do not yet
 as almost all frameworks can generate this format with some additional configuration (including Ruby and Node.js test frameworks, for example).
 
 If you have archived previous report files, you can also publish those to Probe Dock as they include a timestamp indicating when the tests were run.
-Your can therefore import your past testing history into Probe Dock.
+Your can therefore import your past testing history.
 
 You can publish an XML test report [manually](#xunit-manual) for trial purposes,
 or from a [continuous integration environment](#xunit-ci).
@@ -68,7 +68,7 @@ If you do not already have a Probe Dock account and organization, you can [regis
 Also make sure you have created your project in Probe Dock.
 
 Log in to Probe Dock and go to your organization's page.
-If you do not already have a technical user, go to your organization's members page:
+If you do not already have a technical user, go to the members page:
 
 ![Organization Members Page]({{ page.media_folder }}/organization-members.png)
 
@@ -76,11 +76,11 @@ Click on "Add a member" and create a **technical user**:
 
 ![Create Technical User]({{ page.media_folder }}/new-technical-member.png)
 
-Once you have your technical user, go to your organization's members page and generate an **API access token** for that user:
+Once you have your technical user, you can generate an **API access token** for that user from the members page:
 
 ![Technical User API Access Token]({{ page.media_folder }}/technical-user-api-access-token.png)
 
-Go to your project list or the project's page and get the **ID** of your project:
+You also need to go to your project list or the project's page and get the **ID** of your project:
 
 ![Project ID]({{ page.media_folder }}/project-id.png)
 
@@ -92,10 +92,10 @@ You must supply headers for your API access token, the project ID, the project v
                           -H "Authorization: Bearer YOUR_API_ACCESS_TOKEN_HERE" \
                           -H "Probe-Dock-Project-Id: o4m14w1u6hz3" \
                           -H "Probe-Dock-Project-Version: 1.0.0" \
-                          -H "Probe-Dock-Category: JUnit"
+                          -H "Probe-Dock-Category: JUnit" \
                           https://trial.probedock.io/api/publish
 
-If your XML report file is valid, Probe Dock will accept it and respond with the HTTP status code *202 Accepted*.
+If your XML report file is accepted, the HTTP status code of the response will be *202 Accepted*.
 Your test report will appear in Probe Dock a few seconds later.
 
 If Probe Dock cannot understand the contents of your report file for any reason,
@@ -140,7 +140,7 @@ but you can also switch to the number of test runs by day.
 
 Each time a developer runs tests on his machine and publishes the results to Probe Dock,
 or each time a continuous integration environment does the same, it counts for 1 test run.
-The number of test runs by day therefore allows you to track the testing activity and its frequency,
+The number of test runs by day therefore allows you to track the test execution activity,
 not only when new tests are written.
 
 Of course, this information can still be filtered both by project and/or user.
@@ -161,13 +161,13 @@ A simplified version of the widget is also displayed in each project's box in th
 ### Test Suite Size
 
 This widget shows the evolution of the total number of tests in your test suite by week.
-It shows the growth of the test suite over a longer period than the existing test run activity widget.
+Unlike the test run activity widget which shows daily activity, this one shows the cumulative growth of the test suite, and over a much longer timespan.
 Of course, it can also be filtered by project and/or user.
 
 ![Test Suite Size Widget]({{ page.media_folder }}/test-suite-size.png)
 
-This widget has been added both to the dashboard and the new project page.
-In the project page, it shows the total number of tests only in a specific project.
+It has been added both to the dashboard and the new project page.
+In the project page, it only shows the total number of the tests specific to the project.
 
 
 
@@ -176,7 +176,7 @@ In the project page, it shows the total number of tests only in a specific proje
 ### Contributors
 
 This widget lists the organization members who have contributed to the testing effort by writing new tests.
-It also indicates how many tests and what kinds of tests they have written, which allows to see who is specialized in what.
+It also indicates how many and what kinds of tests they have written, which shows who is specialized in what.
 
 ![Contributors Widget]({{ page.media_folder }}/contributors.png)
 
@@ -201,7 +201,7 @@ In addition to listing the latest test runs, it also indicates if new tests were
 ### Project Health
 
 This widget shows the latest state of a project for a specific version.
-For each version, it indicates how many tests there are in the project, and how many are passing, failing or inactive the last time they were run.
+For each version, it indicates how many tests there are in the project, and how many were passing, failing or inactive the last time they were run.
 This gives you a quick view on the overall health of a project.
 
 ![Project Health Widget]({{ page.media_folder }}/project-health.png)
@@ -214,13 +214,15 @@ This gives you a quick view on the overall health of a project.
 
 If you want to quickly try Probe Dock and your favorite test framework generates standard xUnit/JUnit XML test reports,
 you can simply take your XML report file and drag-and-drop it into this widget.
-Probe Dock will queue it for processing and your report will appear in the UI a few seconds later.
+Probe Dock will queue it for processing and your report will appear a few seconds later.
+
+You can select the version of the project used to run the tests, as well as the test category:
 
 ![xUnit XML Reports Dropzone]({{ page.media_folder }}/xunit.png)
 
 As described [at the beginning of the article](#xunit),
 you do not have to manually upload XML reports:
-they can also be sent directly to the API.
+they can also be sent directly to the Probe Dock API.
 The widget is provided because it is convenient for trial purposes.
 
 
@@ -229,5 +231,5 @@ The widget is provided because it is convenient for trial purposes.
 
 ## Bugfixes
 
-* Tags and tickets were not correctly assigned to tests when processing test result payloads.
-* Different tests sharing names and keys caused payload processing to fail in specific circumstances.
+* Tags and tickets were not correctly assigned to tests when test results were published.
+* Multiple test results sharing names and test keys caused payload processing to fail in special cases.
