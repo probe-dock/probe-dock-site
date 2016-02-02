@@ -6,9 +6,236 @@
 </description>
     <link>http://probedock.io/</link>
     <atom:link href="http://probedock.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Jan 2016 14:26:50 +0100</pubDate>
-    <lastBuildDate>Mon, 18 Jan 2016 14:26:50 +0100</lastBuildDate>
+    <pubDate>Tue, 02 Feb 2016 18:54:34 +0100</pubDate>
+    <lastBuildDate>Tue, 02 Feb 2016 18:54:34 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Probe Dock v0.1.14 Released</title>
+        <description>&lt;p&gt;&lt;strong&gt;Probe Dock v0.1.14&lt;/strong&gt; is now available!
+It brings you new widgets on your organization’s dashboard as well as on the new project page.
+Also, if you have an existing testing infrastructure that generates standard xUnit XML test reports (like JUnit does),
+Probe Dock can now collect and analyse those reports as well.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#xunit&quot;&gt;xUnit/JUnit XML Reports&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#new-pages&quot;&gt;New Pages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#widgets&quot;&gt;Widgets&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#test-run-activity&quot;&gt;Test Run Activity&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#test-suite-size&quot;&gt;Test Suite Size&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#contributors&quot;&gt;Contributors&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#project-recent-activity&quot;&gt;Recent Activity for Projects&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#project-health&quot;&gt;Project Health&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#test-report-dropzone&quot;&gt;Test Report Dropzone&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bugfixes&quot;&gt;Bugfixes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;xunit&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;xunitjunit-xml-reports&quot;&gt;xUnit/JUnit XML Reports&lt;/h2&gt;
+
+&lt;p&gt;The standard way of using Probe Dock is to integrate its &lt;a href=&quot;https://github.com/probedock/probedock-probes&quot;&gt;probes&lt;/a&gt; into your favorite test framework.
+This allows Probe Dock to automatically collect information about your testing environment and activity,
+and allows you to enrich your tests with various metadata like custom tags and tickets.&lt;/p&gt;
+
+&lt;p&gt;However, if you already have a testing infrastructure that generates &lt;strong&gt;standard xUnit/JUnit XML reports&lt;/strong&gt;,
+you can also submit these reports to Probe Dock directly.
+Most test frameworks are therefore supported by Probe Dock even if we do not yet supply a probe,
+as almost all frameworks can generate this format with some additional configuration (including Ruby and Node.js test frameworks, for example).&lt;/p&gt;
+
+&lt;p&gt;If you have archived previous report files, you can also publish those to Probe Dock as they include a timestamp indicating when the tests were run.
+Your can therefore import your past testing history.&lt;/p&gt;
+
+&lt;p&gt;You can publish an XML test report &lt;a href=&quot;#xunit-manual&quot;&gt;manually&lt;/a&gt; for trial purposes,
+or from a &lt;a href=&quot;#xunit-ci&quot;&gt;continuous integration environment&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;xunit-manual&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-publish-an-xml-test-report-manually&quot;&gt;How to publish an XML test report manually&lt;/h3&gt;
+
+&lt;p&gt;If you do not already have a Probe Dock account and organization, you can &lt;a href=&quot;https://trial.probedock.io/register&quot;&gt;register a trial account&lt;/a&gt; to try it.
+Also make sure you have created your project in Probe Dock.&lt;/p&gt;
+
+&lt;p&gt;Log in to Probe Dock and go to your project’s page.&lt;/p&gt;
+
+&lt;p&gt;Set the desired version and test category in the publishing widget,
+then simply drag-and-drop your XML report file into the dropzone:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_14/xunit.png&quot; alt=&quot;xUnit XML Reports Dropzone&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If Probe Dock cannot understand the contents of your report file for any reason,
+it will notify you and provide you with a list of errors describing what seems to be missing or invalid.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;xunit-ci&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-publish-an-xml-test-report-from-a-continuous-integration-environment&quot;&gt;How to publish an XML test report from a continuous integration environment&lt;/h3&gt;
+
+&lt;p&gt;If you do not already have a Probe Dock account and organization, you can &lt;a href=&quot;https://trial.probedock.io/register&quot;&gt;register a trial account&lt;/a&gt; to try it.
+Also make sure you have created your project in Probe Dock.&lt;/p&gt;
+
+&lt;p&gt;Log in to Probe Dock and go to your organization’s page.
+If you do not already have a technical user, go to the members page:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_14/organization-members.png&quot; alt=&quot;Organization Members Page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click on “Add a member” and create a &lt;strong&gt;technical user&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_14/new-technical-member.png&quot; alt=&quot;Create Technical User&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you have your technical user, you can generate an &lt;strong&gt;API access token&lt;/strong&gt; for that user from the members page:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_14/technical-user-api-access-token.png&quot; alt=&quot;Technical User API Access Token&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You also need to go to your project list or the project’s page and get the &lt;strong&gt;ID&lt;/strong&gt; of your project:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_14/project-id.png&quot; alt=&quot;Project ID&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, on a Unix continuous integration environment for example, you can simply curl your XML report file into Probe Dock.
+You must supply headers for your API access token, the project ID, the project version, and optionally a test category:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cat report.xml | curl --data-binary @- \
+                      -H &quot;Content-Type: application/xml&quot; \
+                      -H &quot;Authorization: Bearer YOUR_API_ACCESS_TOKEN_HERE&quot; \
+                      -H &quot;Probe-Dock-Project-Id: o4m14w1u6hz3&quot; \
+                      -H &quot;Probe-Dock-Project-Version: 1.0.0&quot; \
+                      -H &quot;Probe-Dock-Category: JUnit&quot; \
+                      https://trial.probedock.io/api/publish
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If your XML report file is accepted, the HTTP status code of the response will be &lt;em&gt;202 Accepted&lt;/em&gt;.
+Your test report will appear in Probe Dock a few seconds later.&lt;/p&gt;
+
+&lt;p&gt;If Probe Dock cannot understand the contents of your report file for any reason,
+it will respond with the HTTP status code &lt;em&gt;422 Unprocessable Entity&lt;/em&gt; and provide you with a list of errors indicating what seems to be missing or invalid.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;new-pages&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;new-pages&quot;&gt;New Pages&lt;/h2&gt;
+
+&lt;p&gt;The &lt;strong&gt;project page&lt;/strong&gt; shows detailed information about each of your organization’s projects.
+It includes all of the new &lt;a href=&quot;#widgets&quot;&gt;widgets&lt;/a&gt; described in this article.&lt;/p&gt;
+
+&lt;p&gt;You can access it by clicking on a project’s name in the project list,
+or by clicking on a project version label in a test run report or in the dashboard:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_14/project-label.png&quot; alt=&quot;Project Label Link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;test details page&lt;/strong&gt; will show information about a particular test in your test suite.
+At this time it only includes basic details about a test such as the dates it was first and last run,
+but it will soon allow you to browse the result of the tests or see how its execution time changed over time.
+You can access it by clicking a test result’s name in a test run report.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;widgets&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;widgets&quot;&gt;Widgets&lt;/h2&gt;
+
+&lt;p&gt;5 new widgets have been added and 1 was improved.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;test-run-activity&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;test-run-activity&quot;&gt;Test Run Activity&lt;/h3&gt;
+
+&lt;p&gt;This widget is an updated version of the previous &lt;strong&gt;new tests&lt;/strong&gt; widget.
+It not only allows you to see the number of new tests written by day, like before,
+but you can also switch to the number of test runs by day.&lt;/p&gt;
+
+&lt;p&gt;Each time a developer runs tests on his machine and publishes the results to Probe Dock,
+or each time a continuous integration environment does the same, it counts for 1 test run.
+The number of test runs by day therefore allows you to track the test execution activity,
+not only when new tests are written.&lt;/p&gt;
+
+&lt;p&gt;Of course, this information can still be filtered both by project and/or user.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_14/test-run-activity.png&quot; alt=&quot;Test Run Activity Widget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In addition to being in the dashboard, this widget has also been added to the new project page,
+showing the activity specific to that project.&lt;/p&gt;
+
+&lt;p&gt;A simplified version of the widget is also displayed in each project’s box in the project list:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_14/test-run-activity-project-list.png&quot; alt=&quot;Test Run Activity Widget in the Project List&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;test-suite-size&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;test-suite-size&quot;&gt;Test Suite Size&lt;/h3&gt;
+
+&lt;p&gt;This widget shows the evolution of the total number of tests in your test suite by week.
+Unlike the test run activity widget which shows daily activity, this one shows the cumulative growth of the test suite, and over a much longer timespan.
+Of course, it can also be filtered by project and/or user.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_14/test-suite-size.png&quot; alt=&quot;Test Suite Size Widget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It has been added both to the dashboard and the new project page.
+In the project page, it only shows the total number of the tests specific to the project.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;contributors&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;contributors&quot;&gt;Contributors&lt;/h3&gt;
+
+&lt;p&gt;This widget lists the organization members who have contributed to the testing effort by writing new tests.
+It also indicates how many and what kinds of tests they have written, which shows who is specialized in what.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_14/contributors.png&quot; alt=&quot;Contributors Widget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This widget has been added both to the dashboard and the new project page.
+In the project page, it only shows the organization members who have written new tests for a specific project.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;project-recent-activity&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;recent-activity-for-projects&quot;&gt;Recent Activity for Projects&lt;/h3&gt;
+
+&lt;p&gt;This widget is similar to the &lt;strong&gt;recent activity&lt;/strong&gt; widget on the dashboard, but only shows the activity for a specific project in the new project page.
+In addition to listing the latest test runs, it also indicates if new tests were added for each test run, and how many.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_14/project-recent-activity.png&quot; alt=&quot;Project Recent Activity Widget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;project-health&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;project-health&quot;&gt;Project Health&lt;/h3&gt;
+
+&lt;p&gt;This widget shows the latest state of a project for a specific version.
+For each version, it indicates how many tests there are in the project, and how many were passing, failing or inactive the last time they were run.
+This gives you a quick view on the overall health of a project.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_14/project-health.png&quot; alt=&quot;Project Health Widget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;test-report-dropzone&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;test-report-dropzone&quot;&gt;Test Report Dropzone&lt;/h3&gt;
+
+&lt;p&gt;If you want to quickly try Probe Dock and your favorite test framework generates standard xUnit/JUnit XML test reports,
+you can simply take your XML report file and drag-and-drop it into this widget.
+Probe Dock will queue it for processing and your report will appear a few seconds later.&lt;/p&gt;
+
+&lt;p&gt;You can select the version of the project used to run the tests, as well as the test category:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_14/xunit.png&quot; alt=&quot;xUnit XML Reports Dropzone&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As described &lt;a href=&quot;#xunit&quot;&gt;at the beginning of the article&lt;/a&gt;,
+you do not have to manually upload XML reports:
+they can also be sent directly to the Probe Dock API.
+The widget is provided because it is convenient for trial purposes.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;bugfixes&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;bugfixes&quot;&gt;Bugfixes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tags and tickets were not correctly assigned to tests when test results were published.&lt;/li&gt;
+  &lt;li&gt;Multiple test results sharing names and test keys caused payload processing to fail in special cases.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 02 Feb 2016 20:00:00 +0100</pubDate>
+        <link>http://probedock.io/blog/releases/2016/02/02/probedock-v0.1.14/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/releases/2016/02/02/probedock-v0.1.14/</guid>
+        
+        
+        <category>releases</category>
+        
+      </item>
     
       <item>
         <title>Probe Dock at the JUGL</title>
@@ -632,39 +859,6 @@ They will be reset every week on Sunday.&lt;/p&gt;
         
         
         <category>releases</category>
-        
-      </item>
-    
-      <item>
-        <title>Probe Dock at the EBU DevCon 2015!</title>
-        <description>&lt;p&gt;We will tell the story behind Probe Dock at the &lt;a href=&quot;https://tech.ebu.ch/events/devcon15&quot;&gt;EBU Developer Conference&lt;/a&gt; on October 7! Our session will be at 12:10, and the conference will take place at &lt;a href=&quot;http://maps.google.ch/maps?f=q&amp;amp;source=s_q&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=european+broadcasting+union&amp;amp;sll=46.205393,6.13555&amp;amp;sspn=0.073776,0.167713&amp;amp;ie=UTF8&amp;amp;hq=european+broadcasting+union&amp;amp;hnear=&amp;amp;ll=46.236378,6.135521&amp;amp;spn=0.070766,0.167713&amp;amp;z=13&amp;amp;iwloc=A&quot;&gt;EBU Headquarters&lt;/a&gt; in Geneva.&lt;/p&gt;
-
-&lt;p&gt;This third EBU Developer Conference will provide an opportunity to learn about best practices in software engineering and get hands-on with current development and deployment tools. Participants will pick up new ideas to run software-driven broadcast infrastructures and to improve their engineering workflows and overall development teams’ organisation.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;DevCon 2015 features keynotes from Cornelius Suermann (PayPal), Bob Uva (New Relic) and Ken Schwaber (Scrum.org).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The conference sessions cover Big Data &amp;amp; Recommendation Systems, Security, Identity Management, DevOps, Distributed Applications, Open Source. Agile Management, Applications for Connected TVs.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Hands-on Workshops are provided on CPA, D3.js, and Visual Radio and there will be an Agile Clinic, a pitching session and an informal drinks night!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;our-presentation-from-nothing-to-thousands-of-tests&quot;&gt;Our presentation: From nothing to thousands of tests&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;We worked in a startup where over 6 years the technology team grew from 1 to 25 people, and from nothing we built an automated test suite with thousands of tests. We will tell the story of how we used automated testing as a cornerstone of agile methodologies to increase software quality, and how we solved the main issues we encountered: How do you show the value of automated tests to developers and motivate them to write more? How can you write better tests? How can you have a comprehensive view of software quality across components and technologies?&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Thu, 01 Oct 2015 22:00:00 +0200</pubDate>
-        <link>http://probedock.io/blog/news/2015/10/01/probedock-at-ebu-devcon/</link>
-        <guid isPermaLink="true">http://probedock.io/blog/news/2015/10/01/probedock-at-ebu-devcon/</guid>
-        
-        
-        <category>news</category>
         
       </item>
     

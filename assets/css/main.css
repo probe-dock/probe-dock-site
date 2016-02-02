@@ -3454,6 +3454,9 @@ select {
 .blog-page .blog-entry-content blockquote p:last-child {
   margin-bottom: 0;
 }
+.blog-page .blog-entry-content ul li:first-child {
+  margin-top: 1em;
+}
 .footer .footer-col .connect a {
   color: #b3b3b3;
   font-size: 22px;
