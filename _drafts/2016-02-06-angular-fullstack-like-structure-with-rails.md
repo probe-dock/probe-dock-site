@@ -92,3 +92,16 @@ namespace :templates do
   end
 end
 ```
+
+```ruby
+class CustomPreprocessor
+  def initialize options = {}
+  end
+
+  def self.call(input)
+    input[:filename].match(/\.spec\.js$/) ? "" : input[:data]
+  end
+end
+
+Rails.application.assets.register_preprocessor 'application/javascript', CustomPreprocessor
+```
