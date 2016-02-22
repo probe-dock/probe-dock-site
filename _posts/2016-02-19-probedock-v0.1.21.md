@@ -13,8 +13,10 @@ media_folder: /media/probedock-v0_1_20
 * [Widgets](#widgets)
 	* [Recent activity widget improvement](#recent-activity)
 	* [Result history](#result-history)
+	* [Execution time](#execution-time)
 * [Bugfixes](#bugfixes)
 
 Notes:
 	- Recent activity widget improvement also concern the reports list in fact
 	- UI Improvement for Click to copy project IDs
+	- Favicon
