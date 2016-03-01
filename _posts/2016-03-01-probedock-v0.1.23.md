@@ -104,11 +104,11 @@ Convenient link icons will then appear in the projects list and on the project d
 
 ![Project repository link button]({{ page.media_folder }}/project-repo-link-button.png)
 
-**Note** that this should be the URL to access your source code in the browser (starting with `http://` or `https://`).
+**Note** that this should be the URL to access your source code in the browser (starting with `http://` or `https://`), not the clone/checkout URL.
 
 For now we only use this feature to display links, but it opens the door for us to start analyzing your code to enrich the Probe Dock experience.
 For example, you will be able to see a failing test's source code directly in Probe Dock,
-or we will be able to correlate the growth of your codebase to the results of your automated tests.
+or we will be able to correlate the growth of your code base to the results of your automated tests.
 
 
 
@@ -152,7 +152,7 @@ Most IDs can now be copied with a simple click:
 
 ### Page titles
 
-You will now see more useful page titles when navigating:
+You will see more useful page titles when navigating:
 
 ![Page titles]({{ page.media_folder }}/page-titles.png)
 
