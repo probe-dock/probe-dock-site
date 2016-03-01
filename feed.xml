@@ -6,9 +6,193 @@
 </description>
     <link>http://probedock.io/</link>
     <atom:link href="http://probedock.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 02 Feb 2016 18:57:01 +0100</pubDate>
-    <lastBuildDate>Tue, 02 Feb 2016 18:57:01 +0100</lastBuildDate>
+    <pubDate>Tue, 01 Mar 2016 21:03:25 +0100</pubDate>
+    <lastBuildDate>Tue, 01 Mar 2016 21:03:25 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Probe Dock v0.1.23 Released</title>
+        <description>&lt;p&gt;&lt;strong&gt;Probe Dock v0.1.23&lt;/strong&gt; is now available!
+It brings you 3 new widgets to show new data about your projects, including the first 2 widgets to show data about individual tests.
+There have also been several other improvements.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#widgets&quot;&gt;Widgets&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#category-bar-widget&quot;&gt;Category bar&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#test-results-history-widget&quot;&gt;Test results history&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#test-execution-time-widget&quot;&gt;Execution time&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#test-result-details&quot;&gt;Test result details&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#project-repository-link&quot;&gt;Project repository link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#improvements&quot;&gt;Improvements&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bugfixes&quot;&gt;Bugfixes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;widgets&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;widgets&quot;&gt;Widgets&lt;/h2&gt;
+
+&lt;p&gt;3 new widgets have been added, 1 in the organization dashboard and project details pages, and 2 in the test details page.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;category-bar-widget&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;category-bar&quot;&gt;Category bar&lt;/h3&gt;
+
+&lt;p&gt;The first thing you now see in your &lt;strong&gt;organization’s dashboard&lt;/strong&gt; is a breakdown of the test categories used across all your projects:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_23/category-bar-widget.png&quot; alt=&quot;Category Bar Widget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The same widget is also included in the &lt;strong&gt;project details page&lt;/strong&gt; where it shows the breakdown for that particular project.
+This information can also be &lt;strong&gt;filtered by user&lt;/strong&gt; so that you can see what kind of tests each developer most works with.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;test-results-history-widget&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;test-results-history&quot;&gt;Test results history&lt;/h3&gt;
+
+&lt;p&gt;The &lt;strong&gt;test details page&lt;/strong&gt; finally has widgets!
+To access this page, click on a result in one of your test reports:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_23/test-report-results.png&quot; alt=&quot;Test Report Results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This first widget will show you &lt;strong&gt;the latest results of the test&lt;/strong&gt; in the same style as test reports,
+allowing you to immediately identify &lt;strong&gt;flickering&lt;/strong&gt;, i.e. when a test passes, then fails, then passes, etc.
+This could indicate an error due to leftover state data from another test or a random condition.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_23/test-results-history-widget.png&quot; alt=&quot;Test Results History Widget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;By default, results are shown &lt;strong&gt;across all versions&lt;/strong&gt; of the project.
+Use the filters to see only the results received &lt;strong&gt;for a particular version&lt;/strong&gt;.
+The widget will also tell you if there are versions in which the test &lt;strong&gt;was never run&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_23/test-results-history-widget-filtered.png&quot; alt=&quot;Test Results History Widget (Filtered)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also filter the results &lt;strong&gt;by user&lt;/strong&gt;, which can help you identify issues on a given developer’s machine.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;test-execution-time-widget&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;test-execution-time&quot;&gt;Test execution time&lt;/h3&gt;
+
+&lt;p&gt;This other widget in the test details page shows you the &lt;strong&gt;evolution of the test’s execution time&lt;/strong&gt;.
+You will see if a test suddenly develops &lt;strong&gt;performance problems&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_23/test-execution-time-widget.png&quot; alt=&quot;Test Execution Time Widget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;By default it shows the execution time for the 50 latest results, and then allows you to navigate backwards and forwards in time.
+You can filter to only show the execution time for a given project version, or for a given runner (the user who ran the tests).&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;test-result-details&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;test-result-details&quot;&gt;Test result details&lt;/h3&gt;
+
+&lt;p&gt;Clicking on one of the results in the &lt;strong&gt;test results history widget&lt;/strong&gt; will open a dialog giving you &lt;strong&gt;more detailed information about the result&lt;/strong&gt;,
+including for example the stack trace in case of failed tests.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_23/test-result-details.png&quot; alt=&quot;Test result details&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;project-repository-link&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;project-repository-link&quot;&gt;Project repository link&lt;/h2&gt;
+
+&lt;p&gt;You can now add links to your projects’ repositories on GitHub or wherever you’re hosting your source code:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_23/project-repo-link.png&quot; alt=&quot;Project repository link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Convenient link icons will then appear in the projects list and on the project details page:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_23/project-repo-link-button.png&quot; alt=&quot;Project repository link button&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; that this should be the URL to access your source code in the browser (starting with &lt;code&gt;http://&lt;/code&gt; or &lt;code&gt;https://&lt;/code&gt;), not the clone/checkout URL.&lt;/p&gt;
+
+&lt;p&gt;For now we only use this feature to display links, but it opens the door for us to start analyzing your code to enrich the Probe Dock experience.
+For example, you will be able to see a failing test’s source code directly in Probe Dock,
+or we will be able to correlate the growth of your code base to the results of your automated tests.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;improvements&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;improvements&quot;&gt;Improvements&lt;/h2&gt;
+
+&lt;h3 id=&quot;collapsed-projects-in-the-recent-activity-widget&quot;&gt;Collapsed projects in the recent activity widget&lt;/h3&gt;
+
+&lt;p&gt;If you publish reports with test results from many projects, only &lt;strong&gt;the first 5&lt;/strong&gt; will be shown by default with the rest collapsed.
+The “More…” button allows you to show the rest.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_23/recent-activity-widget-collapsed-projects.png&quot; alt=&quot;Collapsed projects in the recent activity widget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Additionally, in the project details page, only the version will be shown since you’re in the context of a particular project.&lt;/p&gt;
+
+&lt;h3 id=&quot;gravatar-identicons&quot;&gt;Gravatar identicons&lt;/h3&gt;
+
+&lt;p&gt;Probe Dock account avatars are powered by &lt;a href=&quot;http://gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.
+You can register your e-mail there and associate an image with it.&lt;/p&gt;
+
+&lt;p&gt;However, for those who don’t want to do that, we have activated &lt;strong&gt;identicons&lt;/strong&gt;,
+which means that their avatar will be a pattern generated from their e-mail.
+Even users that do not use Gravatar will have different avatars from each other.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_23/gravatar-identicons.png&quot; alt=&quot;Gravatar identicons&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;copy-on-click-organization--project-ids&quot;&gt;Copy-on-click organization &amp;amp; project IDs&lt;/h3&gt;
+
+&lt;p&gt;Most IDs can now be copied with a simple click:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_23/copy-on-click-project-id.png&quot; alt=&quot;Copy-on-click organization and project IDs&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;page-titles&quot;&gt;Page titles&lt;/h3&gt;
+
+&lt;p&gt;You will see more useful page titles when navigating:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_23/page-titles.png&quot; alt=&quot;Page titles&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;other-improvements&quot;&gt;Other improvements&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In the projects list, the pie chart showing the results of the last test run is now a link to that test run.&lt;/li&gt;
+  &lt;li&gt;We have a favicon, finally!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;bugfixes&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;bugfixes&quot;&gt;Bugfixes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fixed a bug where invite links to new organizations would not work when already logged in.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 01 Mar 2016 22:00:00 +0100</pubDate>
+        <link>http://probedock.io/blog/releases/2016/03/01/probedock-v0.1.23/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/releases/2016/03/01/probedock-v0.1.23/</guid>
+        
+        
+        <category>releases</category>
+        
+      </item>
+    
+      <item>
+        <title>Probe Dock JUGL Presentation</title>
+        <description>&lt;p&gt;We presented Probe Dock at &lt;a href=&quot;http://jugl.ch/&quot;&gt;JUGL&lt;/a&gt; this evening.
+It went very well and we got interesting questions and feedback.
+Thanks to all attendees and of course to organizers and &lt;a href=&quot;http://octo.ch&quot;&gt;OCTO&lt;/a&gt; for hosting the presentation!&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://www.dropbox.com/s/21tcoa2xn4ck5h2/Jugl%20February%202016.pdf?dl=0&quot;&gt;slides we used for the presentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As always, do not hesitate to contact us if you have additional questions or feedback.&lt;/p&gt;
+
+&lt;h2 id=&quot;q--a-after-the-presentation&quot;&gt;Q &amp;amp; A after the presentation&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Does Probe Dock obtain the Jenkins runner when a job is run?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Not yet. We plan to make a plugin for Jenkins with a deeper integration of Probe Dock.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 04 Feb 2016 21:00:00 +0100</pubDate>
+        <link>http://probedock.io/blog/news/2016/02/04/jugl-presentation/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/news/2016/02/04/jugl-presentation/</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
     
       <item>
         <title>Probe Dock v0.1.14 Released</title>
@@ -818,47 +1002,6 @@ and to correlate the data of testing activities with other data such as test cov
         
         
         <category>howto</category>
-        
-      </item>
-    
-      <item>
-        <title>Probe Dock Soft-Shake Schedule</title>
-        <description>&lt;p&gt;&lt;a href=&quot;/blog/news/2015/09/01/probedock-at-soft-shake/&quot;&gt;As promised&lt;/a&gt;, here’s the schedule for our Presentation at the &lt;a href=&quot;http://soft-shake.ch/2015/en/&quot;&gt;Soft-Shake 2015&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Presentation:&lt;/strong&gt; Test analytics: exploitez la richesse de vos tests automatisés&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Date:&lt;/strong&gt; October 22nd&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Session:&lt;/strong&gt; Slot 0, room 1, 10:30&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Note that the session’s start time may yet change.
-We will update this post if necessary.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 08 Oct 2015 15:00:00 +0200</pubDate>
-        <link>http://probedock.io/blog/news/2015/10/08/probedock-soft-shake-schedule/</link>
-        <guid isPermaLink="true">http://probedock.io/blog/news/2015/10/08/probedock-soft-shake-schedule/</guid>
-        
-        
-        <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Probe Dock v0.1.9 Released</title>
-        <description>&lt;p&gt;&lt;strong&gt;Probe Dock v0.1.9&lt;/strong&gt; is now available!
-It brings you a &lt;a href=&quot;https://trial.probedock.io/register&quot;&gt;trial version&lt;/a&gt; where anyone can register an account to test Probe Dock.&lt;/p&gt;
-
-&lt;p&gt;Trial accounts are free but time-limited.
-They will be reset every week on Sunday.&lt;/p&gt;
-
-&lt;p&gt;Check out our &lt;a href=&quot;http://probedock.io/getting-started/&quot;&gt;Getting Started&lt;/a&gt; page!&lt;/p&gt;
-</description>
-        <pubDate>Mon, 05 Oct 2015 18:00:00 +0200</pubDate>
-        <link>http://probedock.io/blog/releases/2015/10/05/probedock-v0_1_9/</link>
-        <guid isPermaLink="true">http://probedock.io/blog/releases/2015/10/05/probedock-v0_1_9/</guid>
-        
-        
-        <category>releases</category>
         
       </item>
     
