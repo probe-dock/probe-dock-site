@@ -6,8 +6,8 @@
 </description>
     <link>http://probedock.io/</link>
     <atom:link href="http://probedock.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Mar 2016 21:03:25 +0100</pubDate>
-    <lastBuildDate>Tue, 01 Mar 2016 21:03:25 +0100</lastBuildDate>
+    <pubDate>Tue, 01 Mar 2016 21:06:09 +0100</pubDate>
+    <lastBuildDate>Tue, 01 Mar 2016 21:06:09 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -166,31 +166,6 @@ Even users that do not use Gravatar will have different avatars from each other.
         
         
         <category>releases</category>
-        
-      </item>
-    
-      <item>
-        <title>Probe Dock JUGL Presentation</title>
-        <description>&lt;p&gt;We presented Probe Dock at &lt;a href=&quot;http://jugl.ch/&quot;&gt;JUGL&lt;/a&gt; this evening.
-It went very well and we got interesting questions and feedback.
-Thanks to all attendees and of course to organizers and &lt;a href=&quot;http://octo.ch&quot;&gt;OCTO&lt;/a&gt; for hosting the presentation!&lt;/p&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://www.dropbox.com/s/21tcoa2xn4ck5h2/Jugl%20February%202016.pdf?dl=0&quot;&gt;slides we used for the presentation&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;As always, do not hesitate to contact us if you have additional questions or feedback.&lt;/p&gt;
-
-&lt;h2 id=&quot;q--a-after-the-presentation&quot;&gt;Q &amp;amp; A after the presentation&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Does Probe Dock obtain the Jenkins runner when a job is run?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Not yet. We plan to make a plugin for Jenkins with a deeper integration of Probe Dock.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 04 Feb 2016 21:00:00 +0100</pubDate>
-        <link>http://probedock.io/blog/news/2016/02/04/jugl-presentation/</link>
-        <guid isPermaLink="true">http://probedock.io/blog/news/2016/02/04/jugl-presentation/</guid>
-        
-        
-        <category>news</category>
         
       </item>
     
@@ -1002,6 +977,28 @@ and to correlate the data of testing activities with other data such as test cov
         
         
         <category>howto</category>
+        
+      </item>
+    
+      <item>
+        <title>Probe Dock Soft-Shake Schedule</title>
+        <description>&lt;p&gt;&lt;a href=&quot;/blog/news/2015/09/01/probedock-at-soft-shake/&quot;&gt;As promised&lt;/a&gt;, here’s the schedule for our Presentation at the &lt;a href=&quot;http://soft-shake.ch/2015/en/&quot;&gt;Soft-Shake 2015&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Presentation:&lt;/strong&gt; Test analytics: exploitez la richesse de vos tests automatisés&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Date:&lt;/strong&gt; October 22nd&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Session:&lt;/strong&gt; Slot 0, room 1, 10:30&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note that the session’s start time may yet change.
+We will update this post if necessary.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 08 Oct 2015 15:00:00 +0200</pubDate>
+        <link>http://probedock.io/blog/news/2015/10/08/probedock-soft-shake-schedule/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/news/2015/10/08/probedock-soft-shake-schedule/</guid>
+        
+        
+        <category>news</category>
         
       </item>
     
