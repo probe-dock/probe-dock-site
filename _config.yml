@@ -7,7 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://probedock.io" # the base hostname & protocol for your site
 
 # Author name shown for a post when no author is specified
-default_author: Probe Dock
+default_author: the Probe Dock team
 
 paginate: 6
 paginate_path: "/blog/:num/"
