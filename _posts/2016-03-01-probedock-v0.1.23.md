@@ -2,7 +2,7 @@
 layout: post
 title: "Probe Dock v0.1.23 Released"
 categories: releases
-date: 2016-03-01 19:00:00
+date: 2016-03-01 21:00:00
 media_folder: /media/probedock-v0_1_23
 ---
 
