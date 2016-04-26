@@ -6,9 +6,174 @@
 </description>
     <link>http://probedock.io/</link>
     <atom:link href="http://probedock.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Mar 2016 21:06:09 +0100</pubDate>
-    <lastBuildDate>Tue, 01 Mar 2016 21:06:09 +0100</lastBuildDate>
+    <pubDate>Tue, 26 Apr 2016 20:07:34 +0200</pubDate>
+    <lastBuildDate>Tue, 26 Apr 2016 20:07:34 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Probe Dock v0.1.28 Released</title>
+        <description>&lt;p&gt;&lt;strong&gt;Probe Dock v0.1.28&lt;/strong&gt; is now available.
+You get new filters to find what you’re looking for, a management page for administrators to keep an eye on overall data growth, and more!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#admin-menu&quot;&gt;Admin menu&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#project-filters&quot;&gt;Project filters&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#report-filters&quot;&gt;Report filters&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#management-page&quot;&gt;Management page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#user-filters&quot;&gt;User filters&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#improvements&quot;&gt;Improvements&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#test-execution-time-widget-trend-line&quot;&gt;Test execution trend line&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#technical-user-names-no-longer-globally-unique&quot;&gt;Technical user names are no longer globally unique&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#technical-health&quot;&gt;Health widget now based on continuous integration results by default&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#humanized-xunit-test-names&quot;&gt;Humanized xUnit test names&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bugfixes&quot;&gt;Bugfixes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#known-bugs&quot;&gt;Known bugs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;admin-menu&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;admin-menu&quot;&gt;Admin menu&lt;/h2&gt;
+
+&lt;p&gt;Instead of being only accessible from the organization dashboard,
+the &lt;strong&gt;Members&lt;/strong&gt; and &lt;strong&gt;Edit organization&lt;/strong&gt; links have been moved to the Admin menu.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_28/simpler-organization-menu.png&quot; alt=&quot;Simpler organization menu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The same menu gives &lt;strong&gt;platform administrators&lt;/strong&gt; access to other features, like the &lt;a href=&quot;#management-page&quot;&gt;new management page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_28/admin-menu.png&quot; alt=&quot;Admin menu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;project-filters&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;project-filters&quot;&gt;Project filters&lt;/h2&gt;
+
+&lt;p&gt;The projects page has a new search box to find projects more easily when the list grows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_28/project-filters.png&quot; alt=&quot;Project filters&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;report-filters&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;report-filters&quot;&gt;Report filters&lt;/h2&gt;
+
+&lt;p&gt;The reports page now has several filters to help you find the reports you are looking for:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_28/report-filters.png&quot; alt=&quot;Report filters&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;By runner:&lt;/strong&gt; only display reports with tests run by at least one of the selected users.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;By project:&lt;/strong&gt; only display reports with tests in at least one of the selected projects.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;By version:&lt;/strong&gt; only display reports with test results for at least one of the selected project versions.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;By category:&lt;/strong&gt; only display reports with tests having at least one of the selected categories.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;By status:&lt;/strong&gt; only display reports containing at least one passing, failing or inactive test; or containing at least one new test.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When these filters are combined, only reports that match all of the criteria are displayed.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;management-page&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;management-page&quot;&gt;Management page&lt;/h2&gt;
+
+&lt;p&gt;The new management page provides statistics about the Probe Dock platform.
+It is accessible from the Admin menu for users who have sufficient privileges.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Organization administrators&lt;/strong&gt; can obtain statistics about their organization(s):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_28/management-page-org-admins.png&quot; alt=&quot;Management page for organization administrators&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On the same page, &lt;strong&gt;platform administrators&lt;/strong&gt; have access to a background jobs (Resque) dashboard and database statistics.
+Additionally, they can obtain the same statistics as organization administrators for all registered organizations:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_28/management-page-platform-admins.png&quot; alt=&quot;Management page for platform administrators&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;user-filters&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;user-filters&quot;&gt;User filters&lt;/h2&gt;
+
+&lt;p&gt;The users page (accessible only to platform administrators) has new filters to help find users:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_28/user-filters.png&quot; alt=&quot;User filters&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;improvements&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;improvements&quot;&gt;Improvements&lt;/h2&gt;
+
+&lt;p&gt;&lt;a name=&quot;test-execution-time-widget-trend-line&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;test-execution-time-trend-line&quot;&gt;Test execution time trend line&lt;/h3&gt;
+
+&lt;p&gt;The test execution time widget now displays a red trend line indicating the general tendency of the execution time to increase or decrease:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_28/test-execution-time-widget-trend-line.png&quot; alt=&quot;Trend line&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;technical-user-names-no-longer-globally-unique&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;technical-user-names-are-no-longer-globally-unique&quot;&gt;Technical user names are no longer globally unique&lt;/h3&gt;
+
+&lt;p&gt;Previously, all users, whether human or technical, could not have identical names.
+This was impractical because technical users tend to have the same name across organizations (e.g. Jenkins, Travis).&lt;/p&gt;
+
+&lt;p&gt;Technical user names are now validated only within their organization.
+You may use a name even if another organization already has a technical—or human—user with that name.&lt;/p&gt;
+
+&lt;p&gt;Organization administrators may rename existing technical users.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;technical-health&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;health-widget-now-based-on-continuous-integration-results-by-default&quot;&gt;Health widget now based on continuous integration results by default&lt;/h3&gt;
+
+&lt;p&gt;The project health pie chart now displays the state of the latest test run by a technical user (by default).
+This will most likely be the latest run on your continuous integration server,
+and therefore a better indicator of health than the latest run by a developer.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/probedock-v0_1_28/technical-health.png&quot; alt=&quot;Technical health&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can still select a different user to view their latest test run, if you wish.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;humanized-xunit-test-names&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;humanized-xunit-test-names&quot;&gt;Humanized xUnit test names&lt;/h3&gt;
+
+&lt;p&gt;When xUnit test reports are submitted, Probe Dock will humanize the test names as probes do:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;itShouldReturnAValue&lt;/code&gt; becomes &lt;code&gt;It should return a value&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This transformation is only applied if the test name contains no spaces.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;bugfixes&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;bugfixes&quot;&gt;Bugfixes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fixed a performance issue where infinite scroll would enter an infinite loop when there were not enough test results to fill the page.&lt;/li&gt;
+  &lt;li&gt;Fixed a bug were some reports would appear multiple times in the reports list when filtering by category.&lt;/li&gt;
+  &lt;li&gt;Fixed a bug where the project form’s repository link field would display no error when entering an invalid non-HTTP URL.&lt;/li&gt;
+  &lt;li&gt;Fixed a bug where following a project’s link from the reports page would display a blank project page.&lt;/li&gt;
+  &lt;li&gt;Fixed a bug in the test results and execution time widgets where selecting a user who has run no tests would hide the controls and render the widget unusable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;known-bugs&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;known-bugs&quot;&gt;Known bugs&lt;/h2&gt;
+
+&lt;p&gt;The following bugs are known and will be fixed in the next release:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Some report filter combinations produce an error and fail to update the report list.&lt;/li&gt;
+  &lt;li&gt;The organization members page is temporarily only accessible by the organization administrator.&lt;/li&gt;
+  &lt;li&gt;Attempting to create a user with the same name as another but in different case will fail as expected but display no error.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 26 Apr 2016 22:00:00 +0200</pubDate>
+        <link>http://probedock.io/blog/releases/2016/04/26/probedock-v0.1.28/</link>
+        <guid isPermaLink="true">http://probedock.io/blog/releases/2016/04/26/probedock-v0.1.28/</guid>
+        
+        
+        <category>releases</category>
+        
+      </item>
     
       <item>
         <title>Probe Dock v0.1.23 Released</title>
@@ -977,28 +1142,6 @@ and to correlate the data of testing activities with other data such as test cov
         
         
         <category>howto</category>
-        
-      </item>
-    
-      <item>
-        <title>Probe Dock Soft-Shake Schedule</title>
-        <description>&lt;p&gt;&lt;a href=&quot;/blog/news/2015/09/01/probedock-at-soft-shake/&quot;&gt;As promised&lt;/a&gt;, here’s the schedule for our Presentation at the &lt;a href=&quot;http://soft-shake.ch/2015/en/&quot;&gt;Soft-Shake 2015&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Presentation:&lt;/strong&gt; Test analytics: exploitez la richesse de vos tests automatisés&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Date:&lt;/strong&gt; October 22nd&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Session:&lt;/strong&gt; Slot 0, room 1, 10:30&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Note that the session’s start time may yet change.
-We will update this post if necessary.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 08 Oct 2015 15:00:00 +0200</pubDate>
-        <link>http://probedock.io/blog/news/2015/10/08/probedock-soft-shake-schedule/</link>
-        <guid isPermaLink="true">http://probedock.io/blog/news/2015/10/08/probedock-soft-shake-schedule/</guid>
-        
-        
-        <category>news</category>
         
       </item>
     

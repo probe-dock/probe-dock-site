@@ -3444,11 +3444,17 @@ select {
 .blog-page .blog-entry-content h2 {
   margin-top: 3em;
   margin-bottom: 1em;
+  padding-top: 5em;
+  border-top: 1px solid #dddddd;
+  font-weight: bold;
 }
 .blog-page .blog-entry-content h3 {
-  margin-top: 1.4em;
+  margin-top: 3em;
 }
 .blog-page .blog-entry-content img {
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 10px;
   max-width: 100%;
 }
 .blog-page .blog-entry-content blockquote p:last-child {
