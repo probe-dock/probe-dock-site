@@ -6,7 +6,7 @@ date: 2016-04-26 20:00:00
 media_folder: /media/probedock-v0_1_28
 ---
 
-**Probe Dock v0.1.28** is now available!
+**Probe Dock v0.1.28** is now available.
 You get new filters to find what you're looking for, a management page for administrators to keep an eye on overall data growth, and more!
 
 * [Admin menu](#admin-menu)
