@@ -20,6 +20,7 @@ You get new filters to find what you're looking for, a management page for admin
   * [Health widget now based on continuous integration results by default](#technical-health)
   * [Humanized xUnit test names](#humanized-xunit-test-names)
 * [Bugfixes](#bugfixes)
+* [Known bugs](#known-bugs)
 
 
 
@@ -160,3 +161,15 @@ This transformation is only applied if the test name contains no spaces.
 * Fixed a bug where the project form's repository link field would display no error when entering an invalid non-HTTP URL.
 * Fixed a bug where following a project's link from the reports page would display a blank project page.
 * Fixed a bug in the test results and execution time widgets where selecting a user who has run no tests would hide the controls and render the widget unusable.
+
+
+
+<a name="known-bugs"></a>
+
+## Known bugs
+
+The following bugs are known and will be fixed in the next release:
+
+* Some report filter combinations produce an error and fail to update the report list.
+* The organization members page is temporarily only accessible by the organization administrator.
+* Attempting to create a user with the same name as another but in different case will fail as expected but display no error.
