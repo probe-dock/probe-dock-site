@@ -6,7 +6,7 @@ date: 2016-06-02 16:00:00
 media_folder: /media/probedock-v0_1_29
 ---
 
-**Probe Dock v0.1.29** is now available with a bunch of improvements.
+**Probe Dock v0.1.29** is now available with a bunch of improvements and new probe features.
 
 * [Inactive flag in JavaScript probes](#inactive-flag-in-javascript-probes)
 * [Annotations in the Cucumber Ruby probe](#annotations-in-cucumber-ruby-probe)
