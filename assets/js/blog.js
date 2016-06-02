@@ -21,7 +21,7 @@ $(document).ready(function() {
       var targetName = target.attr('href').replace(/^#/, '');
 
       $.scrollTo($('[name=' + targetName + ']'), 650, {
-        offset: -90
+        offset: 50
       });
 
       window.location.hash = targetName;
