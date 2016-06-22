@@ -3,45 +3,213 @@ layout: default
 body_classes: [home-page]
 ---
 <div class="page-content">
-  <div class="wrapper">
-    <div class="bg-slider-wrapper">
-        <div class="flexslider bg-slider">
-            <ul class="slides">
-                <li class="slide slide-1"></li>
-                <li class="slide slide-2"></li>
-                <li class="slide slide-3"></li>
-            </ul>
+    <div class="wrapper">
+        <div class="bg-slider-wrapper">
+            <div class="flexslider bg-slider">
+                <ul class="slides">
+                    <li class="slide slide-1"></li>
+                    <li class="slide slide-2"></li>
+                    <li class="slide slide-3"></li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <section class="promo section section-on-bg">
-        <div class="container text-center">
-            <h2 class="title">A new stand on software quality!</h2>
-            <p class="intro">Probe Dock gathers the results of automated tests performed on all system components (mobile, cloud, etc). The data, gathered in vast amounts, is analyzed to offer insights to developers, product owners and QA managers.</p>
-            <p><a class="btn btn-cta btn-cta-primary" href="{{ "/getting-started/" | prepend: site.baseurl }}">Try Probe Dock</a></p>
-        </div>
-    </section>
-
-    <div class="sections-wrapper">
-
-        <section id="why" class="section why">
-            <div class="container">
-                <h2 class="title text-center">Latest News</h2>
-                <p class="intro text-center"><a href="{{ "/blog/" | prepend: site.baseurl }}">Check out our blog</a></p>
-                <div class="row item">
-                    <div class="content col-md-4 col-sm-12 col-xs-12">
-                        <h3 class="title">{{ site.posts.first.title }}</h3>
-                        <div class="desc">
-                          {{ site.posts.first.excerpt }}
-                          <a class="read-more" href="{{ site.posts.first.url }}">Read more <i class="fa fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
-                        <a href="{{ site.posts.first.url }}"><img class="img-responsive" src="{{ site.posts.first.media_folder }}/{% if site.posts.first.banner_file %}{{ site.posts.first.banner_file }}{% else %}banner.jpg{% endif %}" alt="{{ site.posts.first.title }}" /></a>
-                    </figure>
-                </div>
+        <section class="promo section section-on-bg">
+            <div class="container text-center">
+                <h2 class="title">A new stand on software quality!</h2>
+                <p class="intro">Probe Dock gathers the results of automated tests performed on all system components (mobile, cloud, etc). The data, gathered in vast amounts, is analyzed to offer insights to developers, product owners and QA managers.</p>
+                <p><a class="btn btn-cta btn-cta-primary" href="{{ "/getting-started/" | prepend: site.baseurl }}">Try Probe Dock</a></p>
             </div>
         </section>
-    </div>
-  </div>
+
+        <div class="sections-wrapper">
+
+            <section id="why" class="section why">
+                <div class="container">
+                    <h2 class="title text-center">How Can Probe Dock Help You?</h2>
+                    <p class="intro text-center">Probe Dock is a tool that centralizes and archives automated tests results and displays dashboards analyzing this data. It enables you to keep track of multiple projects and their testing activity. We are able to collect automated test results from various testing languages and frameworks, and also from different sources like developers' machines or continuous integration environments. We then use this data to generate reports, to detect trends and to highlight quality issues. In summary, we keep track of automated testing activities to improve software quality. [Description résumée de ce qu'est Probe Dock et à quoi il sert. Le texte proposé me semble trop long.]</p>
+                    <div class="row item">
+                        <div class="content col-md-4 col-sm-12 col-xs-12">
+                            <h3 class="title">See all the automated testing activity in your organization</h3>
+                            <div class="desc">
+                                <p>Probe Dock helps you to see all the automated <strong>testing activity</strong> occurring in your organization. From developers' machines to continuous integrations environments, all the test runs can be centralized. [Focus sur le tracking de l'activité de tests]</p>
+                                <p>Your organization's <strong>dashboard</strong> offers you an overview of various testing information like the repartition of tests by category. [Résumé simple et concis de de la vue principale de probedock -> le dashboard]</p>
+                            </div>
+                            <div class="quote">
+                                <div class="quote-profile">
+                                    <img class="img-responsive img-circle" src="assets/images/people/profile-s-1.png" alt="" />
+                                </div><!--//profile-->
+                                <div class="quote-content">
+                                    <blockquote><p><a href="https://twitter.com/probedock" target="_blank">@probedock</a> user testimonial...</p></blockquote>
+                                    <p class="source">@Someone, from a company</p>
+                                </div><!--//quote-content-->
+                            </div><!--//quote-->
+                        </div><!--//content-->
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+                            <img class="img-responsive" src="assets/images/product/activity.jpg" alt="" />
+                        </figure>
+                    </div><!--//item-->
+
+                    <div class="row item">
+                        <div class="content col-md-4 col-sm-12 col-xs-12 col-md-push-8 col-sm-push-0 col-xs-push-0">
+                            <h3 class="title">Userfriendly testing reports</h3>
+                            <div class="desc">
+                                <p>View your automated tests results from <strong>various sources</strong> into single testing reports. You can <strong>aggregate</strong> the test results in reports pretty much like you want. [Focus sur les single reports et la possibilité d'envoyé dans un rapport les résultats que l'on souhaite comme on le souhaite.]</p>
+                                <p>In a report, you retrieve all the useful information about the test results like the stack traces in case of failures. [Expliquer ce qu'on trouve dans un rapport.]</p>
+                            </div>
+
+                            <div class="quote">
+                                <div class="quote-profile">
+                                    <img class="img-responsive img-circle" src="assets/images/people/profile-s-2.png" alt="" />
+                                </div><!--//profile-->
+                                <div class="quote-content">
+                                    <blockquote><p>User testimonial </p></blockquote>
+                                    <p class="source">@Someone, from a company</p>
+                                </div><!--//quote-content-->
+                            </div><!--//quote-->
+                        </div><!--//content-->
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-pull-4 col-sm-pull-0 col-xs-pull-0">
+                            <img class="img-responsive" src="assets/images/product/report.jpg" alt="" />
+                        </figure>
+                    </div><!--//item-->
+
+                    <div class="row item ">
+                        <div class="content col-md-4 col-sm-12 col-xs-12">
+                            <h3 class="title">Follow the life of your tests</h3>
+                            <div class="desc">
+                                <p>Get details about every test and their results. You can detect tests that are <strong>flickering</strong> across all or chosen version. [Focus sur l'historique de chaque test et la possibilité de voir le flickering]</p>
+                            </div>
+                            <div class="quote">
+                                <div class="quote-profile">
+                                    <img class="img-responsive img-circle" src="assets/images/people/profile-s-3.png" alt="" />
+                                </div><!--//profile-->
+                                <div class="quote-content">
+                                    <blockquote><p>User testimonial</p></blockquote>
+                                    <p class="source"><a href="#">@Someone</a>, from a company</p>
+                                </div><!--//quote-content-->
+                            </div><!--//quote-->
+                        </div><!--//content-->
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+                            <img class="img-responsive" src="assets/images/product/test-life.jpg" alt="" />
+                        </figure>
+                    </div><!--//item-->
+
+                    <div class="row item last-item">
+                        <div class="content col-md-4 col-sm-12 col-xs-12 col-md-push-8 col-sm-push-0 col-xs-push-0">
+                            <h3 class="title">Track your tests by projects</h3>
+                            <div class="desc">
+                                <p>See the latest <strong>health</strong> of your project and the history for all the recorded versions. [Focus sur la santé d'un projet dans le premier paragraphe]</p>
+                                <p>Same as your organization dashboard, you will keep track of the <strong>testing activity</strong> for the project. [Résumé simple des autres widgets]</p>
+                            </div>
+
+                            <div class="quote">
+                                <div class="quote-profile">
+                                    <img class="img-responsive img-circle" src="assets/images/people/profile-s-4.png" alt="" />
+                                </div><!--//profile-->
+                                <div class="quote-content">
+                                    <blockquote><p>User testimonial</p></blockquote>
+                                    <p class="source">@Someone, from a company</p>
+                                </div><!--//quote-content-->
+                            </div><!--//quote-->
+                        </div><!--//content-->
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-pull-4 col-sm-pull-0 col-xs-pull-0">
+                            <img class="img-responsive" src="assets/images/product/project.jpg" alt="" />
+                        </figure>
+                    </div><!--//item-->
+
+
+                    <div class="feature-lead text-center">
+                        <h4 class="title">Want to discover all the features?</h4>
+                        <p><a class="btn btn-cta btn-cta-secondary" href="{{ site.baseurl }}/features">Take a Tour</a></p>
+                    </div>
+                </div><!--//container-->
+            </section><!--//why-->
+
+
+            <!-- ******Testimonials Section****** -->
+            <section class="section testimonials">
+                <div class="container">
+                    <h2 class="title text-center">What are people saying about Velocity?</h2>
+                    <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#testimonials-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#testimonials-carousel" data-slide-to="1"></li>
+                            <li data-target="#testimonials-carousel" data-slide-to="2"></li>
+                        </ol><!--//carousel-indicators-->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <figure class="profile"><img src="assets/images/people/profile-m-1.png" alt="" /></figure>
+                                <div class="content">
+                                    <blockquote>
+                                        <i class="fa fa-quote-left"></i>
+                                        <p>User testimonial</p>
+                                    </blockquote>
+                                    <p class="source">Someone<br /><span class="title">Co-Founder, Startup ...</span></p>
+                                </div><!--//content-->
+                            </div><!--//item-->
+                            <div class="item">
+                                <figure class="profile"><img src="assets/images/people/profile-m-2.png" alt="" /></figure>
+                                <div class="content">
+                                    <blockquote>
+                                        <i class="fa fa-quote-left"></i>
+                                        <p>User testimonial</p>
+                                    </blockquote>
+                                    <p class="source">Someone<br /><span class="title">Entrepreneur, ...</span></p>
+                                </div><!--//content-->
+                            </div><!--//item-->
+                            <div class="item">
+                                <figure class="profile"><img src="assets/images/people/profile-m-3.png" alt="" /></figure>
+                                <div class="content">
+                                    <blockquote>
+                                        <i class="fa fa-quote-left"></i>
+                                        <p>User testimonial</p>
+                                    </blockquote>
+                                    <p class="source">Someone<br /><span class="title">CTO, ...</span></p>
+                                </div><!--//content-->
+                            </div><!--//item-->
+                        </div><!--//carousel-inner-->
+                    </div><!--//carousel-->
+                </div><!--//container-->
+            </section><!--//testimonials-->
+
+            <section id="why" class="section why">
+                <div class="container">
+                    <h2 class="title text-center">Latest News</h2>
+                    <p class="intro text-center"><a href="{{ "/blog/" | prepend: site.baseurl }}">Check out our blog</a></p>
+                    <div class="row item">
+                        <div class="content col-md-4 col-sm-12 col-xs-12">
+                            <h3 class="title">{{ site.posts.first.title }}</h3>
+                            <div class="desc">
+                              {{ site.posts.first.excerpt }}
+                              <a class="read-more" href="{{ site.posts.first.url }}">Read more <i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+                            <a href="{{ site.posts.first.url }}"><img class="img-responsive" src="{{ site.posts.first.media_folder }}/{% if site.posts.first.banner_file %}{{ site.posts.first.banner_file }}{% else %}banner.jpg{% endif %}" alt="{{ site.posts.first.title }}" /></a>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ******Used by Section****** -->
+            <section class="section press">
+                <div class="container text-center">
+                    <h2 class="title">Used by</h2>
+                    <ul class="press-list list-inline row">
+                        <li class="col-md-2 col-sm-2 col-xs-4"><a href="#"><img class="img-responsive" src="assets/images/press/press-1.png" alt="" /></a></li>
+                    </ul><!--//press-list-->
+                </div><!--//container-->
+            </section><!--//press-->
+
+            <!-- ******CTA Section****** -->
+            <section id="cta-section" class="section cta-section text-center home-cta-section">
+                <div class="container">
+                    <h2 class="title">Ready to improve your automated tests?</h2>
+                    <p class="intro">Join Probe Dock users.</p>
+                    <p><a class="btn btn-cta btn-cta-primary" href="{{ site.baseurl }}/contact" target="_blank">Contact us</a></p>
+                </div><!--//container-->
+            </section><!--//cta-section-->
+        </div>
+    </div><!--//section-wrapper-->
+
 </div>
