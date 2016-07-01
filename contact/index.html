@@ -10,11 +10,11 @@ body_classes: [home-page]
     <div class="container">
         <h2 class="title text-center">Contact Us</h2>
         <p class="intro text-center">We’d love to hear from you.</p>
-        <form id="contact-form" class="contact-form" method="post" action="">
+        <form id="contact-form" class="contact-form" method="post" action="https://formspree.io/contact@probedock.io">
+            <input type="hidden" name="_next" value="{{ site.baseurl }}/thanks" />
             <div class="row text-center">
                 <div class="contact-form-inner col-md-8 col-sm-12 col-xs-12 col-md-offset-2 col-sm-offset-0 xs-offset-0">
                     <div class="row">
-
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                             <label class="sr-only" for="cname">Your name</label>
                             <input type="text" class="form-control" id="cname" name="name" placeholder="Your name" minlength="2" required>
