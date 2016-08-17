@@ -9,7 +9,7 @@ body_classes: [features-page]
 
 <section class="section story-section section-on-bg">
     <div class="container text-center">
-        <h2 class="title">Product features</h2>
+        <h2 class="title">Probe Dock Features</h2>
     </div>
 </section>
 
@@ -33,9 +33,9 @@ body_classes: [features-page]
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs text-center" role="tablist">
                     <li class="active"><a href="#feature-1" role="tab" data-toggle="tab"><i class="fa fa-history"></i><br /><span class="hidden-sm hidden-xs">Recent activity</span></a></li>
-                    <li><a href="#feature-2" role="tab" data-toggle="tab"><i class="fa fa-pie-chart"></i><br /><span class="hidden-sm hidden-xs">Tests repartition</span></a></li>
-                    <li><a href="#feature-3" role="tab" data-toggle="tab"><i class="fa fa-users"></i><br /><span class="hidden-sm hidden-xs">Test contributors</span></a></li>
-                    <li class="last"><a href="#feature-4" role="tab" data-toggle="tab"><i class="fa fa-line-chart"></i><br /><span class="hidden-sm hidden-xs">Test time execution</span></a></li>
+                    <li><a href="#feature-2" role="tab" data-toggle="tab"><i class="fa fa-pie-chart"></i><br /><span class="hidden-sm hidden-xs">Test suite composition</span></a></li>
+                    <li><a href="#feature-3" role="tab" data-toggle="tab"><i class="fa fa-users"></i><br /><span class="hidden-sm hidden-xs">Contributors</span></a></li>
+                    <li class="last"><a href="#feature-4" role="tab" data-toggle="tab"><i class="fa fa-line-chart"></i><br /><span class="hidden-sm hidden-xs">Execution time trends</span></a></li>
                 </ul><!--//nav-tabs-->
 
                 <!-- Tab panes -->
@@ -44,53 +44,53 @@ body_classes: [features-page]
                         <h3 class="title sr-only">Recent activity</h3>
                         <figure class="figure text-center">
                             <img class="img-responsive" src="{{ site.baseurl }}/assets/images/product/recent-activity.png" alt="" />
-                            <figcaption class="figure-caption">Latest test results received</figcaption>
+                            <figcaption class="figure-caption">Latest test reports</figcaption>
                         </figure>
                         <div class="desc text-left">
-                            <p>The recent activity let you keep track of the testing activity of your organization. [Ça reprend un peu ce qu'il y a sur la home page.]</p>
+                            <p>Follow the latest testing activity with this list of the most recently generated test reports. Each line indicates:</p>
                             <ul class="list-unstyled">
-                                <li><i class="fa fa-star"></i>See the summary of passed/failed tests</li>
-                                <li><i class="fa fa-star"></i>See who has run the tests</li>
-                                <li><i class="fa fa-star"></i>See which projects and versions are gathered in a report</li>
-                                <li><i class="fa fa-star"></i>See the categories of tests</li>
+                                <li><i class="fa fa-star"></i>Who has run the tests</li>
+                                <li><i class="fa fa-star"></i>Which projects and versions are concerned</li>
+                                <li><i class="fa fa-star"></i>What kind of tests were run</li>
+                                <li><i class="fa fa-star"></i>The number of passed/failed tests (color bars)</li>
                             </ul>
-                            <p>When you are browsing to a project, you can track the recent activity of the specific project. [L'idée c'est de dire qu'on a ces infos aussi spécifiquement pour un projet particulier.]</p>
+                            <p>This widget is shown both in your organization's main dashboard, where it shows the latest test reports across projects, and in each project's individual dashboard, where it lists only the reports with test results for that project's test suite.</p>
                         </div><!--//desc-->
                     </div><!--//tab-pane-->
 
                     <div class="tab-pane" id="feature-2">
-                        <h3 class="title sr-only">Test repartition</h3>
+                        <h3 class="title sr-only">Test suite composition</h3>
                         <figure class="figure text-center">
                             <img class="img-responsive" src="{{ site.baseurl }}/assets/images/product/tests-by-categories.png" alt="" />
-                            <figcaption class="figure-caption">Repartition of tests through different categories</figcaption>
+                            <figcaption class="figure-caption">The composition of a test suite by testing framework</figcaption>
                         </figure>
                         <div class="desc text-left">
-                            <p>See how are distributed your tests across categories. [Expliquer qu'on peut sortir la répartition des tests par catégories.]</p>
-                            <p>You can see this repartition across your organization or for each of your project. [Expliquer qu'on peut voir soit pour tout soit pour un projet spécifique.]</p>
+                            <p>Visualize the composition of your test suites. By default, Probe Dock shows the number of tests written with each testing framework, but you can configure it to group tests by any category you want. You could for example analyze the composition by test type (e.g. unit, integration, acceptance).</p>
+                            <p>This widget is shown both in your organization's main dashboard, where it shows the overall composition of all the tests in the organization, and in each project's individual dashboard, where it shows the composition of that particular project's test suite.</p>
                         </div><!--//desc-->
                     </div><!--//tab-pane-->
 
                     <div class="tab-pane" id="feature-3">
-                        <h3 class="title sr-only">Test contributors</h3>
+                        <h3 class="title sr-only">Contributors</h3>
                         <figure class="figure text-center">
                             <img class="img-responsive" src="{{ site.baseurl }}/assets/images/product/contributors.png" alt="" />
-                            <figcaption class="figure-caption">People who made contributions to the automated tests</figcaption>
+                            <figcaption class="figure-caption">Team members who contributed to the automated tests</figcaption>
                         </figure>
                         <div class="desc text-left">
-                            <p>Keep track of people who have made contributions to your organization's tests. [Expliquer qu'on garde une trace de qui participe à l'activité de tests]</p>
-                            <p>As for the other features, you can get this information by project. [Comme d'hab, on peut le faire sur un projet particulier.]</p>
+                            <p>Keep track of who contributed what kind of tests in your organization. You'll know where to look when you need to quickly find the most prolific JUnit expert in the organization.</p>
+                            <p>This widget is shown both in your organization's main dashboard, where it lists contributions across all your projects, and in each project's individual dashboard, where it lists contributions to that particuliar project's test suite.</p>
                         </div><!--//desc-->
                     </div><!--//tab-pane-->
 
                     <div class="tab-pane" id="feature-4">
-                        <h3 class="title sr-only">Test time execution</h3>
+                        <h3 class="title sr-only">Execution time trends</h3>
                         <figure class="figure text-center">
                             <img class="img-responsive" src="{{ site.baseurl }}/assets/images/product/test-execution-time.png" alt="" />
-                            <figcaption class="figure-caption">Trend of test time execution</figcaption>
+                            <figcaption class="figure-caption">Evolution and trend of a test's execution time</figcaption>
                         </figure>
                         <div class="desc text-left">
-                            <p>Understanding why a test is taking more and more time to run is important to detect code issues early in the development process.[Expliquer le contexte de la feature]</p>
-                            <p>The trend of test execution (red line) give you this information allowing you to investigate why the test is becoming slower and slower.[Expliquer à quoi sert le widget et ce qu'il permet]</p>
+                            <p>Knowing that some tests are taking more and more time to execute is important to detect issues early in the development process. The trend of a test's execution time (red line) give you this information, allowing you to investigate and solve potential performance issues.</p>
+                            <p>This widget is shown in the details page for an individual test.</p>
                         </div><!--//desc-->
                     </div><!--//tab-pane-->
                 </div><!--//tab-content-->
@@ -101,16 +101,15 @@ body_classes: [features-page]
 
 <section id="why" class="section why">
     <div class="container">
-        <h2 class="title text-center">The enterprise edition comes with more features!</h2>
+        <h2 class="title text-center">The enterprise edition brings more features!</h2>
 
         <div class="row item">
             <div class="content col-md-4 col-sm-12 col-xs-12">
                 <h3 class="title">Notification rules engine</h3>
                 <div class="desc">
-                    <p>Defines rules to notify your users when <strong>Probe Dock</strong> receive your tests results.</p>
-                    <p>Your rules can react based on project names or versions, from the source of test execution.</p>
-                    <p>You can define the channels and the recipients of your notifications.</p>
-                    <p>[Ajouter des explications]</p>
+                    <p><strong>Notify</strong> your team members when Probe Dock receives test results.</p>
+                    <p>Apply rules to <strong>customize</strong> your organization's notifications by project, version, execution environment, etc.</p>
+                    <p>Send notifications to <strong>various channels</strong> such as e-mail, a messaging app like Slack, or even to ambient devices. Rig an alarm to sound when you break the stable branch!</p>
                 </div>
             </div><!--//content-->
             <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
@@ -122,9 +121,10 @@ body_classes: [features-page]
             <div class="content col-md-4 col-sm-12 col-xs-12 col-md-push-8 col-sm-push-0 col-xs-push-0">
                 <h3 class="title">Reports approval workflow</h3>
                 <div class="desc">
-                    <p>Configure workflows for your test reports to let them be approved or rejected.</p>
-                    <p>You can configure who will be notified for each step of your workflow and decide the requirements for approval.</p>
-                    <p>[Ajouter des explications]</p>
+                    <p>Some test reports are more important than others; maybe you want someone to make sure that the latest release branch's automated tests are all green before deploying to production. Probe Dock lets you configure workflows to <strong>require approval</strong> of those reports.</p>
+                    <p>These workflows plug into the notification rules engine to let the right people know that they have test reports pending review.</p>
+                    <p>Define the <strong>requirements for approval</strong>: Who can approve this report? How many need to approve it? Is there a time limit?</p>
+                    <p>Approved reports can also be <strong>archived</strong> for future reference.</p>
                 </div>
             </div><!--//content-->
             <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-pull-4 col-sm-pull-0 col-xs-pull-0">
@@ -136,9 +136,9 @@ body_classes: [features-page]
             <div class="content col-md-4 col-sm-12 col-xs-12">
                 <h3 class="title">Knowledge base</h3>
                 <div class="desc">
-                    <p>Keep track of tricky defects in your code and the solutions applied to fix them.</p>
-                    <p>Give the possibility to your developers to participate and enrich the <strong>knowledge base</strong>. They can <strong>comments</strong> the knowledge items. They can <strong>vote</strong> for comments and knowledge items to give them more weight on some solutions.</p>
-                    <p>The knowledge items and comments fully support <strong>markdown</strong> and <strong>syntax highlighting</strong></p>
+                    <p>Ever found yourself in a situation where you know that you already solved a similar issue two months ago, but you just can't remember how?</p>
+                    <p>Keep track of tricky bugs in your code and the solutions applied to fix them. Let developers participate and enrich the <strong>knowledge base</strong> by leaving <strong>comments</strong> and <strong>voting</strong> to give more weight to particular problems and solutions.</p>
+                    <p>Knowledge items and comments fully support <strong>markdown</strong> and <strong>syntax highlighting</strong>.</p>
                 </div>
             </div><!--//content-->
             <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
