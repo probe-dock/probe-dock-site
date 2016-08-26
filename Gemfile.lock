@@ -156,7 +156,7 @@ GEM
       addressable (~> 2.3)
     less (2.6.0)
       commonjs (~> 0.2.7)
-    libv8 (3.16.14.7)
+    libv8 (3.16.14.15)
     liquid (2.6.2)
     listen (2.10.1)
       celluloid (~> 0.16.0)
@@ -205,8 +205,11 @@ DEPENDENCIES
   jekyll
   jekyll-less
   launchy
-  libv8 (= 3.16.14.7)
+  libv8 (= 3.16.14.15)
   paint
   rake
   s3_uploader
   therubyracer (= 0.12.2)
+
+BUNDLED WITH
+   1.12.5
