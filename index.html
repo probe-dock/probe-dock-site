@@ -3,45 +3,211 @@ layout: default
 body_classes: [home-page]
 ---
 <div class="page-content">
-  <div class="wrapper">
-    <div class="bg-slider-wrapper">
-        <div class="flexslider bg-slider">
-            <ul class="slides">
-                <li class="slide slide-1"></li>
-                <li class="slide slide-2"></li>
-                <li class="slide slide-3"></li>
-            </ul>
+    <div class="wrapper">
+        <div class="bg-slider-wrapper">
+            <div class="flexslider bg-slider">
+                <ul class="slides">
+                    <li class="slide slide-1"></li>
+                    <li class="slide slide-2"></li>
+                    <li class="slide slide-3"></li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <section class="promo section section-on-bg">
-        <div class="container text-center">
-            <h2 class="title">A new stand on software quality!</h2>
-            <p class="intro">Probe Dock gathers the results of automated tests performed on all system components (mobile, cloud, etc). The data, gathered in vast amounts, is analyzed to offer insights to developers, product owners and QA managers.</p>
-            <p><a class="btn btn-cta btn-cta-primary" href="{{ "/getting-started/" | prepend: site.baseurl }}">Try Probe Dock</a></p>
-        </div>
-    </section>
-
-    <div class="sections-wrapper">
-
-        <section id="why" class="section why">
-            <div class="container">
-                <h2 class="title text-center">Latest News</h2>
-                <p class="intro text-center"><a href="{{ "/blog/" | prepend: site.baseurl }}">Check out our blog</a></p>
-                <div class="row item">
-                    <div class="content col-md-4 col-sm-12 col-xs-12">
-                        <h3 class="title">{{ site.posts.first.title }}</h3>
-                        <div class="desc">
-                          {{ site.posts.first.excerpt }}
-                          <a class="read-more" href="{{ site.posts.first.url }}">Read more <i class="fa fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
-                        <a href="{{ site.posts.first.url }}"><img class="img-responsive" src="{{ site.posts.first.media_folder }}/{% if site.posts.first.banner_file %}{{ site.posts.first.banner_file }}{% else %}banner.jpg{% endif %}" alt="{{ site.posts.first.title }}" /></a>
-                    </figure>
-                </div>
+        <section class="promo section section-on-bg">
+            <div class="container text-center">
+                <h2 class="title">A new stand on software quality!</h2>
+                <p class="intro">Probe Dock gathers the results of automated tests performed on all system components (mobile, cloud, etc). The data, gathered in vast amounts, is analyzed to offer insights to developers, product owners and QA managers.</p>
+                <p><a class="btn btn-cta btn-cta-primary" href="{{ "/getting-started/" | prepend: site.baseurl }}">Try Probe Dock</a></p>
             </div>
         </section>
-    </div>
-  </div>
+
+        <div class="sections-wrapper">
+
+            <section id="why" class="section why">
+                <div class="container">
+                    <div class="row item">
+                        <div class="content col-md-4 col-sm-12 col-xs-12">
+                            <h3 class="title">Track all the automated testing activity in your organization</h3>
+                            <div class="desc">
+                              <p>Probe Dock shows you all the <strong>automated testing activity</strong> in your organization. From developers' machines to continuous integrations environments, from Java to PHP to Ruby (<a href="{{ "/getting-started/#supported-test-frameworks" | prepend: site.baseurl }}">and more</a>), the results of all the tests that are run are centralized.</p>
+                                <p>Your organization's <strong>dashboard</strong> shows the growth of your test suites, their overall composition by test framework, who in the team contributed to what, and more.</p>
+                            </div>
+                            <!--<div class="quote">
+                                <div class="quote-profile">
+                                    <img class="img-responsive img-circle" src="assets/images/people/profile-s-1.png" alt="" />
+                                </div>
+                                <div class="quote-content">
+                                    <blockquote><p><a href="https://twitter.com/probedock" target="_blank">@probedock</a> user testimonial...</p></blockquote>
+                                    <p class="source">@Someone, from a company</p>
+                                </div>
+                            </div>-->
+                        </div><!--//content-->
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+                            <img class="img-responsive" src="assets/images/product/activity.jpg" alt="" />
+                        </figure>
+                    </div><!--//item-->
+
+                    <div class="row item">
+                        <div class="content col-md-4 col-sm-12 col-xs-12 col-md-push-8 col-sm-push-0 col-xs-push-0">
+                            <h3 class="title">User-friendly test reports</h3>
+                            <div class="desc">
+                              <p>Combine your test results from <strong>different test frameworks, programming languages and environments</strong> into a <strong>single test report</strong>. Probe Dock lets you decide which test results to aggregate at runtime.</p>
+                                <p>Test reports contain information about each individual test result, including whether the test passed, the execution time, a stack trace if there was an error, and much more.</p>
+                            </div>
+
+                            <!--<<div class="quote">
+                                div class="quote-profile">
+                                    <img class="img-responsive img-circle" src="assets/images/people/profile-s-2.png" alt="" />
+                                </div>
+                                <div class="quote-content">
+                                    <blockquote><p>User testimonial </p></blockquote>
+                                    <p class="source">@Someone, from a company</p>
+                                </div>
+                            </div>-->
+                        </div><!--//content-->
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-pull-4 col-sm-pull-0 col-xs-pull-0">
+                            <img class="img-responsive" src="assets/images/product/report.jpg" alt="" />
+                        </figure>
+                    </div><!--//item-->
+
+                    <div class="row item ">
+                        <div class="content col-md-4 col-sm-12 col-xs-12">
+                            <h3 class="title">Follow the life of your tests</h3>
+                            <div class="desc">
+                                <p>Probe Dock also tracks each test individually. Knowing the history of a test's results helps to identify <strong>flickering tests</strong> (tests that fail occasionally and at random), or to detect a decrease in performance by highlighting trends in the execution time.</p>
+                            </div>
+                            <!--<div class="quote">
+                                <div class="quote-profile">
+                                    <img class="img-responsive img-circle" src="assets/images/people/profile-s-3.png" alt="" />
+                                </div>
+                                <div class="quote-content">
+                                    <blockquote><p>User testimonial</p></blockquote>
+                                    <p class="source"><a href="#">@Someone</a>, from a company</p>
+                                </div>
+                            </div>-->
+                        </div><!--//content-->
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+                            <img class="img-responsive" src="assets/images/product/test-life.jpg" alt="" />
+                        </figure>
+                    </div><!--//item-->
+
+                    <div class="row item last-item">
+                        <div class="content col-md-4 col-sm-12 col-xs-12 col-md-push-8 col-sm-push-0 col-xs-push-0">
+                            <h3 class="title">Keep projects healthy</h3>
+                            <div class="desc">
+                                <p>Check up on your projects by accessing their individual dashboard. You will see their <strong>health</strong> (the number of passing versus failing tests) for the latest version or for previous versions.</p>
+                                <p>You will also see the same <strong>testing activity</strong> widgets as on the organization's dashboard, but with data scoped to that project.</p>
+                            </div>
+
+                            <!--<div class="quote">
+                                <div class="quote-profile">
+                                    <img class="img-responsive img-circle" src="assets/images/people/profile-s-4.png" alt="" />
+                                </div>
+                                <div class="quote-content">
+                                    <blockquote><p>User testimonial</p></blockquote>
+                                    <p class="source">@Someone, from a company</p>
+                                </div>
+                            </div>-->
+                        </div><!--//content-->
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-pull-4 col-sm-pull-0 col-xs-pull-0">
+                            <img class="img-responsive" src="assets/images/product/project.jpg" alt="" />
+                        </figure>
+                    </div><!--//item-->
+
+
+                    <div class="feature-lead text-center">
+                        <h4 class="title">Do you want to know more?</h4>
+                        <p><a class="btn btn-cta btn-cta-secondary" href="{{ site.baseurl }}/features">Take a Tour</a></p>
+                    </div>
+                </div><!--//container-->
+            </section><!--//why-->
+
+
+            <!-- ******Testimonials Section****** -->
+            <!--<section class="section testimonials">
+                <div class="container">
+                    <h2 class="title text-center">What are people saying about Velocity?</h2>
+                    <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#testimonials-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#testimonials-carousel" data-slide-to="1"></li>
+                            <li data-target="#testimonials-carousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <figure class="profile"><img src="assets/images/people/profile-m-1.png" alt="" /></figure>
+                                <div class="content">
+                                    <blockquote>
+                                        <i class="fa fa-quote-left"></i>
+                                        <p>User testimonial</p>
+                                    </blockquote>
+                                    <p class="source">Someone<br /><span class="title">Co-Founder, Startup ...</span></p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <figure class="profile"><img src="assets/images/people/profile-m-2.png" alt="" /></figure>
+                                <div class="content">
+                                    <blockquote>
+                                        <i class="fa fa-quote-left"></i>
+                                        <p>User testimonial</p>
+                                    </blockquote>
+                                    <p class="source">Someone<br /><span class="title">Entrepreneur, ...</span></p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <figure class="profile"><img src="assets/images/people/profile-m-3.png" alt="" /></figure>
+                                <div class="content">
+                                    <blockquote>
+                                        <i class="fa fa-quote-left"></i>
+                                        <p>User testimonial</p>
+                                    </blockquote>
+                                    <p class="source">Someone<br /><span class="title">CTO, ...</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>-->
+
+            <section id="why" class="section why">
+                <div class="container">
+                    <h2 class="title text-center">Latest News</h2>
+                    <p class="intro text-center"><a href="{{ "/blog/" | prepend: site.baseurl }}">Check out our blog</a></p>
+                    <div class="row item">
+                        <div class="content col-md-4 col-sm-12 col-xs-12">
+                            <h3 class="title">{{ site.posts.first.title }}</h3>
+                            <div class="desc">
+                              {{ site.posts.first.excerpt }}
+                              <a class="read-more" href="{{ site.posts.first.url }}">Read more <i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+                            <a href="{{ site.posts.first.url }}"><img class="img-responsive" src="{{ site.posts.first.media_folder }}/{% if site.posts.first.banner_file %}{{ site.posts.first.banner_file }}{% else %}banner.jpg{% endif %}" alt="{{ site.posts.first.title }}" /></a>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ******Used by Section****** -->
+            <!--<section class="section press">
+                <div class="container text-center">
+                    <h2 class="title">Used by</h2>
+                    <ul class="press-list list-inline row">
+                        <li class="col-md-2 col-sm-2 col-xs-4"><a href="#"><img class="img-responsive" src="assets/images/press/press-1.png" alt="" /></a></li>
+                    </ul>
+                </div>
+            </section>-->
+
+            <!-- ******CTA Section****** -->
+            <section id="cta-section" class="section cta-section text-center home-cta-section">
+                <div class="container">
+                    <h2 class="title">Ready to improve your automated tests?</h2>
+                    <p class="intro">Join the Probe Dock community.</p>
+                    <p><a class="btn btn-cta btn-cta-primary" href="{{ site.baseurl }}/contact">Contact us</a></p>
+                </div><!--//container-->
+            </section><!--//cta-section-->
+        </div>
+    </div><!--//section-wrapper-->
+
 </div>
