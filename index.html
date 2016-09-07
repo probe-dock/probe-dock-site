@@ -31,6 +31,17 @@
   <![endif]-->
   <link rel="canonical" href="http://probedock.io/">
   <link rel="alternate" type="application/rss+xml" title="Probe Dock" href="http://probedock.io/feed.xml" />
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79729973-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 </head>
 
 
@@ -53,7 +64,9 @@
       <div id="navbar-collapse" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li class="nav-item"><a class="page-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="page-link" href="/features">Features</a></li>
           <li class="nav-item"><a class="page-link" href="/getting-started">Getting Started</a></li>
+          <li class="nav-item"><a class="page-link" href="/services">Services</a></li>
           <li class="nav-item"><a class="page-link" href="/blog">Blog</a></li>
         </ul>
       </div>
@@ -63,49 +76,215 @@
 
 
     <div class="page-content">
-  <div class="wrapper">
-    <div class="bg-slider-wrapper">
-        <div class="flexslider bg-slider">
-            <ul class="slides">
-                <li class="slide slide-1"></li>
-                <li class="slide slide-2"></li>
-                <li class="slide slide-3"></li>
-            </ul>
+    <div class="wrapper">
+        <div class="bg-slider-wrapper">
+            <div class="flexslider bg-slider">
+                <ul class="slides">
+                    <li class="slide slide-1"></li>
+                    <li class="slide slide-2"></li>
+                    <li class="slide slide-3"></li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <section class="promo section section-on-bg">
-        <div class="container text-center">
-            <h2 class="title">A new stand on software quality!</h2>
-            <p class="intro">Probe Dock gathers the results of automated tests performed on all system components (mobile, cloud, etc). The data, gathered in vast amounts, is analyzed to offer insights to developers, product owners and QA managers.</p>
-            <p><a class="btn btn-cta btn-cta-primary" href="/getting-started/">Try Probe Dock</a></p>
-        </div>
-    </section>
-
-    <div class="sections-wrapper">
-
-        <section id="why" class="section why">
-            <div class="container">
-                <h2 class="title text-center">Latest News</h2>
-                <p class="intro text-center"><a href="/blog/">Check out our blog</a></p>
-                <div class="row item">
-                    <div class="content col-md-4 col-sm-12 col-xs-12">
-                        <h3 class="title">Probe Dock v0.1.29 Released</h3>
-                        <div class="desc">
-                          <p><strong>Probe Dock v0.1.29</strong> is now available with a bunch of improvements and new probe features.</p>
-
-
-                          <a class="read-more" href="/blog/releases/2016/06/10/probedock-v0.1.29/">Read more <i class="fa fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
-                        <a href="/blog/releases/2016/06/10/probedock-v0.1.29/"><img class="img-responsive" src="/media/probedock-v0_1_29/banner.jpg" alt="Probe Dock v0.1.29 Released" /></a>
-                    </figure>
-                </div>
+        <section class="promo section section-on-bg">
+            <div class="container text-center">
+                <h2 class="title">A new stand on software quality!</h2>
+                <p class="intro">Probe Dock gathers the results of automated tests performed on all system components (mobile, cloud, etc). The data, gathered in vast amounts, is analyzed to offer insights to developers, product owners and QA managers.</p>
+                <p><a class="btn btn-cta btn-cta-primary" href="/getting-started/">Try Probe Dock</a></p>
             </div>
         </section>
-    </div>
-  </div>
+
+        <div class="sections-wrapper">
+
+            <section id="why" class="section why">
+                <div class="container">
+                    <div class="row item">
+                        <div class="content col-md-4 col-sm-12 col-xs-12">
+                            <h3 class="title">Track all the automated testing activity in your organization</h3>
+                            <div class="desc">
+                              <p>Probe Dock shows you all the <strong>automated testing activity</strong> in your organization. From developers' machines to continuous integrations environments, from Java to PHP to Ruby (<a href="/getting-started/#supported-test-frameworks">and more</a>), the results of all the tests that are run are centralized.</p>
+                                <p>Your organization's <strong>dashboard</strong> shows the growth of your test suites, their overall composition by test framework, who in the team contributed to what, and more.</p>
+                            </div>
+                            <!--<div class="quote">
+                                <div class="quote-profile">
+                                    <img class="img-responsive img-circle" src="assets/images/people/profile-s-1.png" alt="" />
+                                </div>
+                                <div class="quote-content">
+                                    <blockquote><p><a href="https://twitter.com/probedock" target="_blank">@probedock</a> user testimonial...</p></blockquote>
+                                    <p class="source">@Someone, from a company</p>
+                                </div>
+                            </div>-->
+                        </div><!--//content-->
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+                            <img class="img-responsive" src="assets/images/product/activity.jpg" alt="" />
+                        </figure>
+                    </div><!--//item-->
+
+                    <div class="row item">
+                        <div class="content col-md-4 col-sm-12 col-xs-12 col-md-push-8 col-sm-push-0 col-xs-push-0">
+                            <h3 class="title">User-friendly test reports</h3>
+                            <div class="desc">
+                              <p>Combine your test results from <strong>different test frameworks, programming languages and environments</strong> into a <strong>single test report</strong>. Probe Dock lets you decide which test results to aggregate at runtime.</p>
+                                <p>Test reports contain information about each individual test result, including whether the test passed, the execution time, a stack trace if there was an error, and much more.</p>
+                            </div>
+
+                            <!--<<div class="quote">
+                                div class="quote-profile">
+                                    <img class="img-responsive img-circle" src="assets/images/people/profile-s-2.png" alt="" />
+                                </div>
+                                <div class="quote-content">
+                                    <blockquote><p>User testimonial </p></blockquote>
+                                    <p class="source">@Someone, from a company</p>
+                                </div>
+                            </div>-->
+                        </div><!--//content-->
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-pull-4 col-sm-pull-0 col-xs-pull-0">
+                            <img class="img-responsive" src="assets/images/product/report.jpg" alt="" />
+                        </figure>
+                    </div><!--//item-->
+
+                    <div class="row item ">
+                        <div class="content col-md-4 col-sm-12 col-xs-12">
+                            <h3 class="title">Follow the life of your tests</h3>
+                            <div class="desc">
+                                <p>Probe Dock also tracks each test individually. Knowing the history of a test's results helps to identify <strong>flickering tests</strong> (tests that fail occasionally and at random), or to detect a decrease in performance by highlighting trends in the execution time.</p>
+                            </div>
+                            <!--<div class="quote">
+                                <div class="quote-profile">
+                                    <img class="img-responsive img-circle" src="assets/images/people/profile-s-3.png" alt="" />
+                                </div>
+                                <div class="quote-content">
+                                    <blockquote><p>User testimonial</p></blockquote>
+                                    <p class="source"><a href="#">@Someone</a>, from a company</p>
+                                </div>
+                            </div>-->
+                        </div><!--//content-->
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+                            <img class="img-responsive" src="assets/images/product/test-life.jpg" alt="" />
+                        </figure>
+                    </div><!--//item-->
+
+                    <div class="row item last-item">
+                        <div class="content col-md-4 col-sm-12 col-xs-12 col-md-push-8 col-sm-push-0 col-xs-push-0">
+                            <h3 class="title">Keep projects healthy</h3>
+                            <div class="desc">
+                                <p>Check up on your projects by accessing their individual dashboard. You will see their <strong>health</strong> (the number of passing versus failing tests) for the latest version or for previous versions.</p>
+                                <p>You will also see the same <strong>testing activity</strong> widgets as on the organization's dashboard, but with data scoped to that project.</p>
+                            </div>
+
+                            <!--<div class="quote">
+                                <div class="quote-profile">
+                                    <img class="img-responsive img-circle" src="assets/images/people/profile-s-4.png" alt="" />
+                                </div>
+                                <div class="quote-content">
+                                    <blockquote><p>User testimonial</p></blockquote>
+                                    <p class="source">@Someone, from a company</p>
+                                </div>
+                            </div>-->
+                        </div><!--//content-->
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-pull-4 col-sm-pull-0 col-xs-pull-0">
+                            <img class="img-responsive" src="assets/images/product/project.jpg" alt="" />
+                        </figure>
+                    </div><!--//item-->
+
+
+                    <div class="feature-lead text-center">
+                        <h4 class="title">Do you want to know more?</h4>
+                        <p><a class="btn btn-cta btn-cta-secondary" href="/features">Take a Tour</a></p>
+                    </div>
+                </div><!--//container-->
+            </section><!--//why-->
+
+
+            <!-- ******Testimonials Section****** -->
+            <!--<section class="section testimonials">
+                <div class="container">
+                    <h2 class="title text-center">What are people saying about Velocity?</h2>
+                    <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#testimonials-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#testimonials-carousel" data-slide-to="1"></li>
+                            <li data-target="#testimonials-carousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <figure class="profile"><img src="assets/images/people/profile-m-1.png" alt="" /></figure>
+                                <div class="content">
+                                    <blockquote>
+                                        <i class="fa fa-quote-left"></i>
+                                        <p>User testimonial</p>
+                                    </blockquote>
+                                    <p class="source">Someone<br /><span class="title">Co-Founder, Startup ...</span></p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <figure class="profile"><img src="assets/images/people/profile-m-2.png" alt="" /></figure>
+                                <div class="content">
+                                    <blockquote>
+                                        <i class="fa fa-quote-left"></i>
+                                        <p>User testimonial</p>
+                                    </blockquote>
+                                    <p class="source">Someone<br /><span class="title">Entrepreneur, ...</span></p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <figure class="profile"><img src="assets/images/people/profile-m-3.png" alt="" /></figure>
+                                <div class="content">
+                                    <blockquote>
+                                        <i class="fa fa-quote-left"></i>
+                                        <p>User testimonial</p>
+                                    </blockquote>
+                                    <p class="source">Someone<br /><span class="title">CTO, ...</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>-->
+
+            <section id="why" class="section why">
+                <div class="container">
+                    <h2 class="title text-center">Latest News</h2>
+                    <p class="intro text-center"><a href="/blog/">Check out our blog</a></p>
+                    <div class="row item">
+                        <div class="content col-md-4 col-sm-12 col-xs-12">
+                            <h3 class="title">Probe Dock v0.1.29 Released</h3>
+                            <div class="desc">
+                              <p><strong>Probe Dock v0.1.29</strong> is now available with a bunch of improvements and new probe features.</p>
+
+
+                              <a class="read-more" href="/blog/releases/2016/06/10/probedock-v0.1.29/">Read more <i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+                            <a href="/blog/releases/2016/06/10/probedock-v0.1.29/"><img class="img-responsive" src="/media/probedock-v0_1_29/banner.jpg" alt="Probe Dock v0.1.29 Released" /></a>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ******Used by Section****** -->
+            <!--<section class="section press">
+                <div class="container text-center">
+                    <h2 class="title">Used by</h2>
+                    <ul class="press-list list-inline row">
+                        <li class="col-md-2 col-sm-2 col-xs-4"><a href="#"><img class="img-responsive" src="assets/images/press/press-1.png" alt="" /></a></li>
+                    </ul>
+                </div>
+            </section>-->
+
+            <!-- ******CTA Section****** -->
+            <section id="cta-section" class="section cta-section text-center home-cta-section">
+                <div class="container">
+                    <h2 class="title">Ready to improve your automated tests?</h2>
+                    <p class="intro">Join the Probe Dock community.</p>
+                    <p><a class="btn btn-cta btn-cta-primary" href="/contact">Contact us</a></p>
+                </div><!--//container-->
+            </section><!--//cta-section-->
+        </div>
+    </div><!--//section-wrapper-->
+
 </div>
 
 
@@ -113,35 +292,66 @@
   <div class="footer-content">
     <div class="container">
       <div class="row">
-        <div class="footer-col download col-md-6 col-sm-12 col-xs-12">
+        <div class="footer-col links col-md-2 col-sm-4 col-xs-12">
           <div class="footer-col-inner">
-            <h3 class="title">On GitHub</h3>
-            <ul class="list-unstyled download-list">
-              <li><a class="btn btn-ghost" href="https://github.com/probedock/probedock"><i class="fa fa-github"></i><span class="text">Probe Dock</span> </a></li>
-              <li><a class="btn btn-ghost" href="https://github.com/probedock/probedock-clients"><i class="fa fa-github"></i><span class="text">Probe Dock Probes</span></a></li>
+            <h3 class="title">About us</h3>
+            <ul class="list-unstyled">
+              <li><a href="/blog"><i class="fa fa-caret-right"></i>Blog</a></li>
+              <!--<li><a href="#"><i class="fa fa-caret-right"></i>Jobs</a></li>-->
+              <li><a href="/contact"><i class="fa fa-caret-right"></i>Contact us</a></li>
             </ul>
+          </div><!--//footer-col-inner-->
+        </div><!--//foooter-col-->
+        <div class="footer-col links col-md-2 col-sm-4 col-xs-12">
+          <div class="footer-col-inner">
+            <h3 class="title">Product</h3>
+            <ul class="list-unstyled">
+              <li><a href="/getting-started"><i class="fa fa-caret-right"></i>Getting started</a></li>
+              <!--<li><a href="#"><i class="fa fa-caret-right"></i>API</a></li>-->
+            </ul>
+          </div><!--//footer-col-inner-->
+        </div><!--//foooter-col-->
+        <div class="footer-col links col-md-2 col-sm-4 col-xs-12 sm-break">
+          <div class="footer-col-inner">
+            <!--<h3 class="title">Support</h3>
+            <ul class="list-unstyled">
+              <li><a href="/contact"><i class="fa fa-caret-right"></i>Help</a></li>
+              <li><a href="#"><i class="fa fa-caret-right"></i>Documentation</a></li>
+              <li><a href="#"><i class="fa fa-caret-right"></i>Terms of services</a></li>
+              <li><a href="/privacy"><i class="fa fa-caret-right"></i>Privacy</a></li>
+            </ul>-->
           </div>
         </div>
         <div class="footer-col contact col-md-6 col-sm-12 col-xs-12">
           <div class="footer-col-inner">
             <a name="contact"></a>
             <h3 class="title">Contact us</h3>
-            <p class="email"><i class="fa fa-envelope-o"></i><a href="#">contact@probedock.io</a></p>
+            <!--<p class="email"><i class="fa fa-envelope-o"></i><a href="mailto:contact@probedock.io">contact@probedock.io</a></p>-->
             <p class="adr clearfix">
               <i class="fa fa-map-marker pull-left"></i>
               <span class="adr-group pull-left">
                 <span class="street-address">Rue Galilée 15</span><br>
-                <span class="city">1400 Yverdon</span><br>
+                <span class="city">1400 Yverdon-les-Bains</span><br>
                 <span class="country-name">Switzerland</span>
               </span>
             </p>
           </div>
-        </div>
-        <div class="footer-col connect col-md-6 col-md-offset-6 col-sm-12 col-xs-12">
-          <div class="footer-col-inner">
+          <div class="footer-col-inner connect">
             <ul class="social list-inline">
+              <li><a href="mailto:contact@probedock.io"><i class="fa fa-envelope-o"></i></a></li>
               <li><a href="https://twitter.com/probedock" target="_blank"><i class="fa fa-twitter"></i></a></li>
               <li class="row-end"><a href="/feed.xml"><i class="fa fa-rss"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="footer-col download col-md-6 col-sm-12 col-xs-12">
+          <div class="footer-col-inner">
+            <h3 class="title">On GitHub</h3>
+            <ul class="list-unstyled download-list">
+              <li><a class="btn btn-ghost" href="https://github.com/probedock/probedock" target="_blank"><i class="fa fa-github"></i><span class="text">Probe Dock</span> </a></li>
+              <li><a class="btn btn-ghost" href="https://github.com/probedock/probedock-clients" target="_blank"><i class="fa fa-github"></i><span class="text">Probe Dock Probes</span></a></li>
             </ul>
           </div>
         </div>
@@ -150,7 +360,7 @@
   </div>
   <div class="bottom-bar">
     <div class="container">
-      <small class="copyright">Copyright &copy; 2015 <a href="/" target="_blank">Probe Dock</a></small>
+      <small class="copyright">Copyright &copy; 2016 <a href="/" target="_blank">Probe Dock</a></small>
     </div>
   </div>
 </footer>
@@ -160,7 +370,7 @@
 <script type="text/javascript" src="/assets/plugins/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="/assets/plugins/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="/assets/plugins/jquery.scrollTo-2.1.1.min.js"></script>
-<script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/assets/plugins/bootstrap-hover-dropdown.min.js"></script>
 <script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
 <script type="text/javascript" src="/assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
@@ -174,7 +384,7 @@
 
 <!-- Vimeo video API -->
 <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
-<script type="text/javascript" src="/assets/js/vimeo.js"></script> 
+<script type="text/javascript" src="/assets/js/vimeo.js"></script>
 
 
   </body>
